@@ -1,8 +1,8 @@
 2a60927148abd1d33b818b535e306557
-::res://::1675802435
+::res://::1675802580
 export_presets.cfg::TextFile::-1::1675730311::0::1::::<><>::
 ::res://addons/::1675724678
-::res://addons/Todo_Manager/::1675802435
+::res://addons/Todo_Manager/::1675802580
 ColourPicker.gd::GDScript::-1::1675702278::0::1::::<>HBoxContainer<>::
 Current.gd::GDScript::-1::1675702278::0::1::::<>Panel<>::
 Dock.gd::GDScript::-1::1675702278::0::1::::<>Control<>::
@@ -10,7 +10,7 @@ Pattern.gd::GDScript::-1::1675702278::0::1::::<>HBoxContainer<>::
 plugin.cfg::TextFile::-1::1675702278::0::1::::<><>::
 plugin.gd::GDScript::-1::1675702278::0::1::::<>EditorPlugin<>::
 Project.gd::GDScript::-1::1675702278::0::1::::<>Panel<>::
-todo.cfg::TextFile::-1::1675802435::0::1::::<><>::
+todo.cfg::TextFile::-1::1675802580::0::1::::<><>::
 todoItem_class.gd::GDScript::-1::1675702280::0::1::::<>RefCounted<>::
 todo_class.gd::GDScript::-1::1675702280::0::1::::<>RefCounted<>::
 ::res://addons/Todo_Manager/doc/::1675702280
