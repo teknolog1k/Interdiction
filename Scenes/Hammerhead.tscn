@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3bou1i4vgrkt"]
+
+[ext_resource type="Texture2D" uid="uid://dh2fwu5gacjyx" path="res://Sprites/icon.svg" id="1_1t2um"]
+[ext_resource type="Script" path="res://Scripts/Hammerhead.gd" id="1_bj27x"]
+[ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_u4sdv"]
+[ext_resource type="Shape2D" uid="uid://d0tu2v3bc2ndf" path="res://Physics Materials/Shapes/hammerhead_headbox.tres" id="2_mcala"]
+[ext_resource type="Shape2D" uid="uid://b2x0wr2bcdijg" path="res://Physics Materials/Shapes/hammerhead_tailbox.tres" id="3_xg11a"]
+
+[node name="Hammerhead" type="RigidBody2D" groups=["Enemies"]]
+rotation = -1.5708
+collision_layer = 9
+collision_mask = 9
+mass = 80.0
+physics_material_override = ExtResource("1_u4sdv")
+gravity_scale = 0.0
+max_contacts_reported = 2
+contact_monitor = true
+linear_damp = 5.0
+angular_damp = 5.0
+script = ExtResource("1_bj27x")
+mag = 3000
+speed = 1500
+turningMag = 18000
+turningSpeed = 8000
+orbitDistance = 250
+perfectOrbitSlow = 1.2
+chargingMag = 500000
+chargingSpeed = 250000
+
+[node name="Headbox" type="CollisionShape2D" parent="."]
+z_index = 2
+position = Vector2(-6, -1.81899e-12)
+shape = ExtResource("2_mcala")
+
+[node name="Tailbox" type="CollisionShape2D" parent="."]
+z_index = 2
+position = Vector2(9, 0)
+shape = ExtResource("3_xg11a")
+debug_color = Color(0.976471, 0.133333, 0.231373, 0.419608)
+
+[node name="Head" type="Sprite2D" parent="."]
+modulate = Color(1, 0.188235, 0.321569, 1)
+z_index = 1
+position = Vector2(-8, 0)
+rotation = 4.71239
+scale = Vector2(0.25, 0.125)
+texture = ExtResource("1_1t2um")
+
+[node name="Hammer" type="Sprite2D" parent="."]
+modulate = Color(1, 0.188235, 0.321569, 1)
+position = Vector2(2, 0)
+rotation = 4.71239
+scale = Vector2(0.125, 0.188)
+texture = ExtResource("1_1t2um")
+
+[node name="Charge Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Stuck Timer" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="timeout" from="Charge Timer" to="." method="_time_to_charge"]
+[connection signal="timeout" from="Stuck Timer" to="." method="_time_to_unstuck"]

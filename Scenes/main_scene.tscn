@@ -1,0 +1,177 @@
+[gd_scene load_steps=14 format=3 uid="uid://dkk3npascg0gk"]
+
+[ext_resource type="Theme" uid="uid://bupib8auxkxug" path="res://Themes/health_text.tres" id="1_2l118"]
+[ext_resource type="PackedScene" uid="uid://cef83b544c02e" path="res://Scenes/player.tscn" id="1_bmfin"]
+[ext_resource type="Script" path="res://Scripts/mainScene.gd" id="1_qim6l"]
+[ext_resource type="Texture2D" uid="uid://ctg77o47rb12o" path="res://Themes/bgGradient.tres" id="2_wlgce"]
+[ext_resource type="Script" path="res://Scripts/UI Controller.gd" id="3_4h1rn"]
+[ext_resource type="Texture2D" uid="uid://dmqsbt4okllwt" path="res://Themes/fgGradient.tres" id="3_l2xfm"]
+[ext_resource type="PackedScene" uid="uid://cy403qds8ooju" path="res://Scenes/ai_pirate.tscn" id="5_s13td"]
+[ext_resource type="PhysicsMaterial" uid="uid://hrnw75jkur0t" path="res://Physics Materials/wallPhysMat.tres" id="8_upmwm"]
+[ext_resource type="PackedScene" uid="uid://b3bou1i4vgrkt" path="res://Scenes/Hammerhead.tscn" id="9_n5ih7"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hxoum"]
+normal = Vector2(1, 0)
+distance = 0.01
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ebaeb"]
+normal = Vector2(0, 1)
+distance = 0.01
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_babm6"]
+normal = Vector2(-1, 0)
+distance = 0.01
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ojhbg"]
+distance = 0.01
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qim6l")
+AIPirateMinimumTime = 5.0
+AIPirateMaximumTime = 10.0
+hammerheadMinimumTime = 8.0
+hammerheadMaximumTime = 10.0
+minX = 50
+maxX = 1050
+minY = 50
+maxY = 550
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Player" parent="." instance=ExtResource("1_bmfin")]
+position = Vector2(504, 314)
+
+[node name="UI Controller" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 1100.0
+offset_bottom = 600.0
+script = ExtResource("3_4h1rn")
+AIPirateScore = 100
+hammerheadScore = 200
+shot = 1.0
+headbutted = 2.0
+metadata/_edit_lock_ = true
+
+[node name="Health Label" type="Label" parent="UI Controller"]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 46.0
+theme = ExtResource("1_2l118")
+text = "placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score Label" type="Label" parent="UI Controller"]
+layout_mode = 1
+anchors_preset = -1
+offset_top = 46.0
+offset_right = 240.0
+offset_bottom = 92.0
+theme = ExtResource("1_2l118")
+theme_override_colors/font_color = Color(0.172549, 1, 0.101961, 1)
+text = "Placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="UI Controller"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.17
+anchor_right = 0.229
+anchor_bottom = 0.244
+offset_top = 0.199997
+offset_right = -0.450012
+offset_bottom = 0.23999
+theme = ExtResource("1_2l118")
+
+[node name="Health Bar" type="TextureProgressBar" parent="UI Controller/Panel"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 40.0
+theme = ExtResource("1_2l118")
+value = 25.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_wlgce")
+texture_progress = ExtResource("3_l2xfm")
+
+[node name="AI Pirate" parent="." instance=ExtResource("5_s13td")]
+position = Vector2(812, 180)
+
+[node name="Hammerhead" parent="." instance=ExtResource("9_n5ih7")]
+position = Vector2(560, 228)
+metadata/_edit_group_ = true
+
+[node name="Spawn Timers" type="Node" parent="."]
+
+[node name="AI Pirate Spawn Timer" type="Timer" parent="Spawn Timers"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="Hammerhead Spawn Timer" type="Timer" parent="Spawn Timers"]
+wait_time = 10.0
+autostart = true
+
+[node name="World Bounds" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Left" type="StaticBody2D" parent="World Bounds"]
+collision_layer = 8
+collision_mask = 8
+physics_material_override = ExtResource("8_upmwm")
+
+[node name="LeftWall" type="CollisionShape2D" parent="World Bounds/Left"]
+position = Vector2(25, 325)
+scale = Vector2(1, 3)
+shape = SubResource("WorldBoundaryShape2D_hxoum")
+one_way_collision_margin = 5.0
+debug_color = Color(0.839216, 0.278431, 0.678431, 0.419608)
+
+[node name="Top" type="StaticBody2D" parent="World Bounds"]
+collision_layer = 8
+collision_mask = 8
+physics_material_override = ExtResource("8_upmwm")
+
+[node name="TopWall" type="CollisionShape2D" parent="World Bounds/Top"]
+position = Vector2(575, 25)
+scale = Vector2(5.5, 1)
+shape = SubResource("WorldBoundaryShape2D_ebaeb")
+one_way_collision_margin = 5.0
+debug_color = Color(0.839216, 0.278431, 0.678431, 0.419608)
+
+[node name="Right" type="StaticBody2D" parent="World Bounds"]
+collision_layer = 8
+collision_mask = 8
+physics_material_override = ExtResource("8_upmwm")
+
+[node name="RightWall" type="CollisionShape2D" parent="World Bounds/Right"]
+position = Vector2(1125, 325)
+scale = Vector2(1, 3)
+shape = SubResource("WorldBoundaryShape2D_babm6")
+one_way_collision_margin = 5.0
+debug_color = Color(0.839216, 0.278431, 0.678431, 0.419608)
+
+[node name="Bottom" type="StaticBody2D" parent="World Bounds"]
+collision_layer = 8
+collision_mask = 8
+physics_material_override = ExtResource("8_upmwm")
+
+[node name="BottomWall" type="CollisionShape2D" parent="World Bounds/Bottom"]
+position = Vector2(575, 625)
+scale = Vector2(5.5, 1)
+shape = SubResource("WorldBoundaryShape2D_ojhbg")
+one_way_collision_margin = 5.0
+debug_color = Color(0.839216, 0.278431, 0.678431, 0.419608)
+
+[connection signal="shoot" from="Player" to="." method="_on_laser_shoot"]
+[connection signal="gotGot" from="AI Pirate" to="UI Controller" method="somebody_got_got"]
+[connection signal="shoot" from="AI Pirate" to="." method="_on_laser_shoot"]
+[connection signal="gotGot" from="Hammerhead" to="UI Controller" method="somebody_got_got"]
+[connection signal="timeout" from="Spawn Timers/AI Pirate Spawn Timer" to="." method="_enemy_time"]
+[connection signal="timeout" from="Spawn Timers/Hammerhead Spawn Timer" to="." method="_hammerhead_time"]

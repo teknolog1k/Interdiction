@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy403qds8ooju"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_crxss"]
+[ext_resource type="Script" path="res://Scripts/AI Pirate.gd" id="1_lxora"]
+[ext_resource type="Texture2D" uid="uid://dh2fwu5gacjyx" path="res://Sprites/icon.svg" id="2_26gl2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsko3"]
+size = Vector2(130, 130)
+
+[node name="AI Pirate" type="RigidBody2D" groups=["Enemies"]]
+rotation = -1.5708
+collision_layer = 9
+collision_mask = 9
+mass = 50.0
+physics_material_override = ExtResource("1_crxss")
+gravity_scale = 0.0
+max_contacts_reported = 3
+contact_monitor = true
+script = ExtResource("1_lxora")
+mag = 8000
+speed = 4000
+turningMag = 10000
+turningSpeed = 5000
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_dsko3")
+debug_color = Color(0.976471, 0.133333, 0.231373, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.188235, 0.321569, 1)
+rotation = 4.71239
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_26gl2")
+
+[node name="Firing Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Firing Timer" to="." method="_time_to_fire"]

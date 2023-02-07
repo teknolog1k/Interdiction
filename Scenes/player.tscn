@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://cef83b544c02e"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_uhs2a"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xy70n"]
+[ext_resource type="Texture2D" uid="uid://dh2fwu5gacjyx" path="res://Sprites/icon.svg" id="2_hrmtf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3n5pv"]
+size = Vector2(130, 130)
+
+[node name="Player" type="RigidBody2D" groups=["Player"]]
+rotation = -1.5708
+collision_layer = 12
+collision_mask = 12
+mass = 50.0
+inertia = 75.0
+physics_material_override = ExtResource("1_uhs2a")
+gravity_scale = 0.0
+max_contacts_reported = 3
+contact_monitor = true
+can_sleep = false
+lock_rotation = true
+script = ExtResource("1_xy70n")
+mag = 15000
+boostWidth = 20
+maxSpeed = 30000
+boostMag = 50000
+slidingSpeed = 30
+slideStrength = 1.002
+breaksMin = 20
+breaksStrength = 1.001
+maxHP = 100.0
+timeToFullHeal = 3
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_hrmtf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_3n5pv")
+
+[node name="Healing Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Healing Timer" to="." method="_on_heal_time"]

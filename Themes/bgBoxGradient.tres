@@ -1,0 +1,8 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://b07hwsvyw822o"]
+
+[ext_resource type="Texture2D" uid="uid://ctg77o47rb12o" path="res://Themes/bgGradient.tres" id="1_h40id"]
+
+[resource]
+texture = ExtResource("1_h40id")
+axis_stretch_horizontal = 1
+region_rect = Rect2(0, 0, 2048, 1)
