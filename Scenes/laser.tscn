@@ -33,4 +33,6 @@ wait_time = 2.0
 one_shot = true
 autostart = true
 
+[node name="Pew Noise" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="timeout" from="Timer" to="." method="_times_up"]
