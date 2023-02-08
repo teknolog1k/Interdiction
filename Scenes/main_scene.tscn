@@ -100,6 +100,9 @@ nine_patch_stretch = true
 texture_under = ExtResource("2_wlgce")
 texture_progress = ExtResource("3_l2xfm")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="UI Controller"]
+max_polyphony = 5
+
 [node name="AI Pirate" parent="." instance=ExtResource("5_s13td")]
 position = Vector2(812, 180)
 
