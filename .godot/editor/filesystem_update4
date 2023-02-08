@@ -1,11 +1,13 @@
-res://Scenes/ai_pirate.tscn
-res://Themes/bgGradient.tres
-res://Themes/fgGradient.tres
+res://Scenes/Hammerhead.tscn
 res://Themes/roundedBar.tres
+res://Themes/bgGradient.tres
 res://Themes/bgBoxGradient.tres
+res://Themes/fgGradient.tres
 res://Themes/boxGradient.tres
 res://Themes/health_text.tres
-res://Scenes/player.tscn
-res://Scenes/Hammerhead.tscn
+res://Scripts/Hammerhead.gd
 res://Scenes/main_scene.tscn
-res://Scenes/laser.tscn
+res://Scripts/UI Controller.gd
+res://Scenes/ai_pirate.tscn
+res://Scenes/player.tscn
+res://Scripts/mainScene.gd

@@ -1,11 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cehfv8ud7pj8s"]
+[gd_scene load_steps=3 format=3 uid="uid://cehfv8ud7pj8s"]
 
 [ext_resource type="Script" path="res://Scripts/Laser.gd" id="1_vh7gn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d5eeh"]
+friction = 0.0
 
 [node name="Laser" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 2
 mass = 0.01
+physics_material_override = SubResource("PhysicsMaterial_d5eeh")
 gravity_scale = 0.0
 continuous_cd = 1
 max_contacts_reported = 2

@@ -1,63 +1,63 @@
 2a60927148abd1d33b818b535e306557
-::res://::1675868349
-export_presets.cfg::TextFile::-1::1675867080::0::1::::<><>::
-::res://addons/::1675867080
-::res://addons/Todo_Manager/::1675868349
-ColourPicker.gd::GDScript::-1::1675867080::0::1::::<>HBoxContainer<>::
-Current.gd::GDScript::-1::1675867080::0::1::::<>Panel<>::
-Dock.gd::GDScript::-1::1675867080::0::1::::<>Control<>::
-Pattern.gd::GDScript::-1::1675867080::0::1::::<>HBoxContainer<>::
-plugin.cfg::TextFile::-1::1675867080::0::1::::<><>::
-plugin.gd::GDScript::-1::1675867080::0::1::::<>EditorPlugin<>::
-Project.gd::GDScript::-1::1675867080::0::1::::<>Panel<>::
-todo.cfg::TextFile::-1::1675868349::0::1::::<><>::
-todoItem_class.gd::GDScript::-1::1675867080::0::1::::<>RefCounted<>::
-todo_class.gd::GDScript::-1::1675867080::0::1::::<>RefCounted<>::
-::res://addons/Todo_Manager/doc/::1675867080
-example.gd::GDScript::-1::1675867080::0::1::::<>Node<>::
-::res://addons/Todo_Manager/doc/images/::1675867080
-example1.png::CompressedTexture2D::8063086250666186557::1675867080::1675867080::1::::<><>::
-example2.png::CompressedTexture2D::4730521275576070400::1675867080::1675867080::1::::<><>::
-Instruct1.png::CompressedTexture2D::160659098078554853::1675867080::1675867080::1::::<><>::
-Instruct2.png::CompressedTexture2D::8747942243506012678::1675867080::1675867080::1::::<><>::
-Instruct3.png::CompressedTexture2D::3707499906825609594::1675867080::1675867080::1::::<><>::
-Instruct4.png::CompressedTexture2D::7484274901220316984::1675867080::1675867080::1::::<><>::
-Instruct5.png::CompressedTexture2D::5664015526484242923::1675867080::1675867080::1::::<><>::
-TODO_Manager_Logo.png::CompressedTexture2D::2650127395303317058::1675867080::1675867080::1::::<><>::
-::res://addons/Todo_Manager/UI/::1675867080
-ColourPicker.tscn::PackedScene::2957809393656723737::1675867080::0::1::::<><>::res://addons/Todo_Manager/ColourPicker.gd
-Dock.tscn::PackedScene::4584442902745049483::1675867080::0::1::::<><>::res://addons/Todo_Manager/Dock.gd<>res://addons/Todo_Manager/Project.gd<>res://addons/Todo_Manager/Current.gd
-Pattern.tscn::PackedScene::4056048923411208166::1675867080::0::1::::<><>::res://addons/Todo_Manager/Pattern.gd
-::res://Fonts/::1675867080
-alarm clock.ttf::FontFile::9040741937594902432::1675867080::1675867080::1::::<><>::
-alarm_clock.tres::FontFile::-1::1675867080::0::1::::<><>::
-::res://Physics Materials/::1675867080
-shipPhysMat.tres::PhysicsMaterial::2079155781841094803::1675867080::0::1::::<><>::
-wallPhysMat.tres::PhysicsMaterial::527246663171540489::1675867080::0::1::::<><>::
-::res://Physics Materials/Shapes/::1675867080
-hammerhead_headbox.tres::RectangleShape2D::8954470021942071095::1675867080::0::1::::<><>::
-hammerhead_tailbox.tres::RectangleShape2D::4330558297203326832::1675867080::0::1::::<><>::
-::res://Scenes/::1675868256
-ai_pirate.tscn::PackedScene::6518809342485730558::1675867080::0::1::::<><>::uid://4vfnldsg5efj<>res://Scripts/AI Pirate.gd<>uid://dh2fwu5gacjyx
-Hammerhead.tscn::PackedScene::4354659816400381259::1675867080::0::1::::<><>::uid://dh2fwu5gacjyx<>res://Scripts/Hammerhead.gd<>uid://4vfnldsg5efj<>uid://d0tu2v3bc2ndf<>uid://b2x0wr2bcdijg
-laser.tscn::PackedScene::5068390237198898416::1675867080::0::1::::<><>::res://Scripts/Laser.gd
-main_scene.tscn::PackedScene::7425448255007407886::1675868256::0::1::::<><>::uid://cef83b544c02e<>res://Scripts/mainScene.gd<>uid://ctg77o47rb12o<>res://Scripts/UI Controller.gd<>uid://dmqsbt4okllwt<>uid://bupib8auxkxug<>uid://cy403qds8ooju<>uid://hrnw75jkur0t<>uid://b3bou1i4vgrkt
-player.tscn::PackedScene::5065972393923233022::1675867080::0::1::::<><>::uid://4vfnldsg5efj<>res://Scripts/Player.gd<>uid://dh2fwu5gacjyx
-::res://Scripts/::1675867080
-AI Pirate.gd::GDScript::-1::1675867080::0::1::::<>RigidBody2D<>::
-Hammerhead.gd::GDScript::-1::1675867080::0::1::::<>RigidBody2D<>::
-Laser.gd::GDScript::-1::1675867080::0::1::::<>RigidBody2D<>::
-mainScene.gd::GDScript::-1::1675867080::0::1::::<>Node2D<>::
-Player.gd::GDScript::-1::1675867080::0::1::::<>RigidBody2D<>::
-UI Controller.gd::GDScript::-1::1675867080::0::1::::<>Control<>::
-::res://Sprites/::1675867080
-icon.svg::CompressedTexture2D::7706666125418721595::1675867080::1675867080::1::::<><>::
-::res://Sprites/Tilemaps/::1675867080
-boundary.tres::TileSet::2982973409353092011::1675867080::0::1::::<><>::uid://dh2fwu5gacjyx
-::res://Themes/::1675868249
-bgBoxGradient.tres::StyleBoxTexture::4207667148171470520::1675868249::0::1::::<><>::uid://ctg77o47rb12o
-bgGradient.tres::GradientTexture1D::6120816533809611236::1675868249::0::1::::<><>::
-boxGradient.tres::StyleBoxTexture::2564927309801572473::1675868249::0::1::::<><>::uid://dmqsbt4okllwt
-fgGradient.tres::GradientTexture1D::8035653953857235363::1675868249::0::1::::<><>::
-health_text.tres::Theme::3821652478711101258::1675868249::0::1::::<><>::res://Fonts/alarm_clock.tres<>uid://dtp5di633iwoo<>uid://b07hwsvyw822o<>uid://bcsp8ivl6bt18<>uid://d12nx04ln3tpg
-roundedBar.tres::StyleBoxFlat::8525643083063211394::1675868249::0::1::::<><>::
+::res://::1675802580
+export_presets.cfg::TextFile::-1::1675730311::0::1::::<><>::
+::res://addons/::1675724678
+::res://addons/Todo_Manager/::1675802580
+ColourPicker.gd::GDScript::-1::1675702278::0::1::::<>HBoxContainer<>::
+Current.gd::GDScript::-1::1675702278::0::1::::<>Panel<>::
+Dock.gd::GDScript::-1::1675702278::0::1::::<>Control<>::
+Pattern.gd::GDScript::-1::1675702278::0::1::::<>HBoxContainer<>::
+plugin.cfg::TextFile::-1::1675702278::0::1::::<><>::
+plugin.gd::GDScript::-1::1675702278::0::1::::<>EditorPlugin<>::
+Project.gd::GDScript::-1::1675702278::0::1::::<>Panel<>::
+todo.cfg::TextFile::-1::1675802580::0::1::::<><>::
+todoItem_class.gd::GDScript::-1::1675702280::0::1::::<>RefCounted<>::
+todo_class.gd::GDScript::-1::1675702280::0::1::::<>RefCounted<>::
+::res://addons/Todo_Manager/doc/::1675702280
+example.gd::GDScript::-1::1675702280::0::1::::<>Node<>::
+::res://addons/Todo_Manager/doc/images/::1675702284
+example1.png::CompressedTexture2D::8063086250666186557::1675702280::1675702284::1::::<><>::
+example2.png::CompressedTexture2D::4730521275576070400::1675702280::1675702284::1::::<><>::
+Instruct1.png::CompressedTexture2D::160659098078554853::1675702280::1675702284::1::::<><>::
+Instruct2.png::CompressedTexture2D::8747942243506012678::1675702280::1675702284::1::::<><>::
+Instruct3.png::CompressedTexture2D::3707499906825609594::1675702280::1675702284::1::::<><>::
+Instruct4.png::CompressedTexture2D::7484274901220316984::1675702280::1675702284::1::::<><>::
+Instruct5.png::CompressedTexture2D::5664015526484242923::1675702280::1675702284::1::::<><>::
+TODO_Manager_Logo.png::CompressedTexture2D::2650127395303317058::1675702280::1675702284::1::::<><>::
+::res://addons/Todo_Manager/UI/::1675702280
+ColourPicker.tscn::PackedScene::2957809393656723737::1675702280::0::1::::<><>::res://addons/Todo_Manager/ColourPicker.gd
+Dock.tscn::PackedScene::4584442902745049483::1675702280::0::1::::<><>::res://addons/Todo_Manager/Dock.gd<>res://addons/Todo_Manager/Project.gd<>res://addons/Todo_Manager/Current.gd
+Pattern.tscn::PackedScene::4056048923411208166::1675702280::0::1::::<><>::res://addons/Todo_Manager/Pattern.gd
+::res://Fonts/::1675255822
+alarm clock.ttf::FontFile::9040741937594902432::1675186892::1675255822::1::::<><>::
+alarm_clock.tres::FontFile::-1::1675187328::0::1::::<><>::
+::res://Physics Materials/::1675802413
+shipPhysMat.tres::PhysicsMaterial::2079155781841094803::1675802413::0::1::::<><>::
+wallPhysMat.tres::PhysicsMaterial::527246663171540489::1675802413::0::1::::<><>::
+::res://Physics Materials/Shapes/::1675802413
+hammerhead_headbox.tres::RectangleShape2D::8954470021942071095::1675802413::0::1::::<><>::
+hammerhead_tailbox.tres::RectangleShape2D::4330558297203326832::1675802413::0::1::::<><>::
+::res://Scenes/::1675802413
+ai_pirate.tscn::PackedScene::6518809342485730558::1675802413::0::1::::<><>::uid://4vfnldsg5efj<>res://Scripts/AI Pirate.gd<>uid://dh2fwu5gacjyx
+Hammerhead.tscn::PackedScene::4354659816400381259::1675802413::0::1::::<><>::uid://dh2fwu5gacjyx<>res://Scripts/Hammerhead.gd<>uid://4vfnldsg5efj<>uid://d0tu2v3bc2ndf<>uid://b2x0wr2bcdijg
+laser.tscn::PackedScene::5068390237198898416::1675802413::0::1::::<><>::res://Scripts/Laser.gd
+main_scene.tscn::PackedScene::7883518344789476810::1675802413::0::1::::<><>::uid://bupib8auxkxug<>uid://cef83b544c02e<>res://Scripts/mainScene.gd<>uid://ctg77o47rb12o<>res://Scripts/UI Controller.gd<>uid://dmqsbt4okllwt<>uid://cy403qds8ooju<>uid://hrnw75jkur0t<>uid://b3bou1i4vgrkt
+player.tscn::PackedScene::5065972393923233022::1675731403::0::1::::<><>::uid://4vfnldsg5efj<>res://Scripts/Player.gd<>uid://dh2fwu5gacjyx
+::res://Scripts/::1675802413
+AI Pirate.gd::GDScript::-1::1675709210::0::1::::<>RigidBody2D<>::
+Hammerhead.gd::GDScript::-1::1675802413::0::1::::<>RigidBody2D<>::
+Laser.gd::GDScript::-1::1675705486::0::1::::<>RigidBody2D<>::
+mainScene.gd::GDScript::-1::1675802413::0::1::::<>Node2D<>::
+Player.gd::GDScript::-1::1675364290::0::1::::<>RigidBody2D<>::
+UI Controller.gd::GDScript::-1::1675802413::0::1::::<>Control<>::
+::res://Sprites/::1675364912
+icon.svg::CompressedTexture2D::7706666125418721595::1675255734::1675255798::1::::<><>::
+::res://Sprites/Tilemaps/::1675364934
+boundary.tres::TileSet::2982973409353092011::1675364934::0::1::::<><>::uid://dh2fwu5gacjyx
+::res://Themes/::1675802413
+bgBoxGradient.tres::StyleBoxTexture::4207667148171470520::1675730384::0::1::::<><>::uid://ctg77o47rb12o
+bgGradient.tres::GradientTexture1D::6120816533809611236::1675730384::0::1::::<><>::
+boxGradient.tres::StyleBoxTexture::2564927309801572473::1675730384::0::1::::<><>::uid://dmqsbt4okllwt
+fgGradient.tres::GradientTexture1D::8035653953857235363::1675730384::0::1::::<><>::
+health_text.tres::Theme::3821652478711101258::1675802413::0::1::::<><>::res://Fonts/alarm_clock.tres<>uid://d12nx04ln3tpg<>uid://dtp5di633iwoo<>uid://b07hwsvyw822o<>uid://bcsp8ivl6bt18
+roundedBar.tres::StyleBoxFlat::8525643083063211394::1675730384::0::1::::<><>::

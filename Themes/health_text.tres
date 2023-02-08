@@ -1,13 +1,13 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://bupib8auxkxug"]
 
-[ext_resource type="FontFile" path="res://Fonts/alarm_clock.tres" id="1_cptgt"]
-[ext_resource type="StyleBox" uid="uid://dtp5di633iwoo" path="res://Themes/roundedBar.tres" id="2_8tpwl"]
-[ext_resource type="StyleBox" uid="uid://b07hwsvyw822o" path="res://Themes/bgBoxGradient.tres" id="3_2ybmg"]
-[ext_resource type="StyleBox" uid="uid://bcsp8ivl6bt18" path="res://Themes/boxGradient.tres" id="4_q82kq"]
-[ext_resource type="FontFile" uid="uid://d12nx04ln3tpg" path="res://Fonts/alarm clock.ttf" id="5_81uiq"]
+[ext_resource type="FontFile" path="res://Fonts/alarm_clock.tres" id="1"]
+[ext_resource type="FontFile" uid="uid://d12nx04ln3tpg" path="res://Fonts/alarm clock.ttf" id="2"]
+[ext_resource type="StyleBox" uid="uid://dtp5di633iwoo" path="res://Themes/roundedBar.tres" id="2_5ax2t"]
+[ext_resource type="StyleBox" uid="uid://b07hwsvyw822o" path="res://Themes/bgBoxGradient.tres" id="3"]
+[ext_resource type="StyleBox" uid="uid://bcsp8ivl6bt18" path="res://Themes/boxGradient.tres" id="4"]
 
 [sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("1_cptgt")])
+fallbacks = Array[Font]([ExtResource("1")])
 face_index = null
 embolden = null
 transform = null
@@ -19,7 +19,7 @@ cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="2"]
-fallbacks = Array[Font]([ExtResource("5_81uiq")])
+fallbacks = Array[Font]([ExtResource("2")])
 face_index = null
 embolden = null
 transform = null
@@ -46,6 +46,6 @@ Label/colors/font_outline_modulate = Color(0.937255, 0.937255, 0.937255, 1)
 Label/constants/outline_size = 0
 Label/font_sizes/font_size = 32
 Label/fonts/Font = SubResource("1")
-Panel/styles/panel = ExtResource("2_8tpwl")
-ProgressBar/styles/background = ExtResource("3_2ybmg")
-ProgressBar/styles/fill = ExtResource("4_q82kq")
+Panel/styles/panel = ExtResource("2_5ax2t")
+ProgressBar/styles/background = ExtResource("3")
+ProgressBar/styles/fill = ExtResource("4")
