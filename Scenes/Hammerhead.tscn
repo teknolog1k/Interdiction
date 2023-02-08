@@ -29,12 +29,12 @@ chargingSpeed = 250000
 
 [node name="Headbox" type="CollisionShape2D" parent="."]
 z_index = 2
-position = Vector2(-6, -1.81899e-12)
+position = Vector2(-8, -1.81899e-12)
 shape = ExtResource("2_mcala")
 
 [node name="Tailbox" type="CollisionShape2D" parent="."]
 z_index = 2
-position = Vector2(9, 0)
+position = Vector2(7, -1.81899e-12)
 shape = ExtResource("3_xg11a")
 debug_color = Color(0.976471, 0.133333, 0.231373, 0.419608)
 

@@ -18,7 +18,7 @@ var thePew: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	UIcontroller = get_node("/root/Node2D/UI Controller")
+	UIcontroller = get_node("/root/Main Scene/UI Controller")
 	thePew = preload("res://Scenes/laser.tscn")
 
 
