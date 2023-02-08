@@ -45,5 +45,8 @@ shape = SubResource("RectangleShape2D_3n5pv")
 wait_time = 5.0
 one_shot = true
 
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Healing Timer" to="." method="_on_heal_time"]
