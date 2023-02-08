@@ -113,6 +113,7 @@ func _time_to_charge():
 
 func _time_to_unstuck():
 	stuck = false
+	#HACK: This shouldn't do anything, but it won't unstick unless we apply a force or impulse, so for now it stays.
 	var wakeupDir = Vector2.from_angle(randi_range(0, 360))
 	apply_central_impulse(wakeupDir * wakeupImpulse)
 	if randi_range(0, 1) == 0:
