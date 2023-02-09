@@ -22,6 +22,7 @@ mag = 3000
 speed = 1500
 turningMag = 18000
 turningSpeed = 8000
+proportionalConstant = 10
 orbitDistance = 250
 perfectOrbitSlow = 1.2
 chargingMag = 500000

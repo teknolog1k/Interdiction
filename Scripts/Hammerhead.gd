@@ -9,6 +9,7 @@ signal gotGot(who, how)
 @export var speed: int
 @export var turningMag: int
 @export var turningSpeed: int
+@export var proportionalConstant: int
 @export_category("Charging")
 @export var orbitDistance: int
 @export var perfectOrbitSlow: float
@@ -30,7 +31,7 @@ var lockedPos: Vector2
 func _ready():
 	charging = false
 	stuck = false
-	UIcontroller = get_node("/root/Node2D/UI Controller")
+	UIcontroller = get_node("/root/Main Scene/UI Controller")
 	chargeTimer = get_node("Charge Timer")
 	stuckTimer = get_node("Stuck Timer")
 
@@ -67,11 +68,11 @@ func _integrate_forces(state):
 	elif stuck == true:
 		pass
 	else:
-		state.apply_torque((angle/10) * turningMag * -1)
+		state.apply_torque((angle/proportionalConstant) * turningMag * -1)
 		if distance > orbitDistance:
-			state.apply_central_force(direction * mag * (abs(distance-orbitDistance)/10))
+			state.apply_central_force(direction * mag * (abs(distance-orbitDistance)/proportionalConstant))
 		elif distance < orbitDistance:
-				state.apply_central_force(direction * mag * (abs(distance-orbitDistance)/10) * -0.5)
+				state.apply_central_force(direction * mag * (abs(distance-orbitDistance)/proportionalConstant) * -0.5)
 		else:
 			state.linear_velocity = state.linear_velocity/perfectOrbitSlow
 	if state.linear_velocity.length() > speed and (charging == false):

@@ -1,14 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cy403qds8ooju"]
+[gd_scene load_steps=5 format=3 uid="uid://dobwx8jlwx1jn"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_crxss"]
 [ext_resource type="Script" path="res://Scripts/AI Pirate.gd" id="1_lxora"]
-[ext_resource type="Texture2D" uid="uid://dh2fwu5gacjyx" path="res://Sprites/icon.svg" id="2_26gl2"]
+[ext_resource type="SpriteFrames" uid="uid://uqe4x6xhf7v6" path="res://Sprites/Enemy/AI Pirate/2_8_2023_export.tres" id="3_qlu3m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dsko3"]
-size = Vector2(130, 130)
+size = Vector2(100, 100)
 
 [node name="AI Pirate" type="RigidBody2D" groups=["Enemies"]]
-rotation = -1.5708
 collision_layer = 9
 collision_mask = 9
 mass = 50.0
@@ -21,18 +20,32 @@ mag = 8000
 speed = 4000
 turningMag = 10000
 turningSpeed = 5000
+proportionalConstant = 10
+turnAnimThreshold = 25
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.25, 0.25)
+position = Vector2(1, 0)
+rotation = 0.785398
+scale = Vector2(0.4, 0.4)
 shape = SubResource("RectangleShape2D_dsko3")
 debug_color = Color(0.976471, 0.133333, 0.231373, 0.419608)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.188235, 0.321569, 1)
-rotation = 4.71239
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_26gl2")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("3_qlu3m")
+animation = &"locking"
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "res://Sprites/Enemy/AI Pirate",
+"o_name": "export.tres",
+"only_visible": false,
+"op_exp": true,
+"source": "res://Sprites/Source Files/AI Pirate.aseprite"
+}
 
 [node name="Firing Timer" type="Timer" parent="."]
 wait_time = 3.0
