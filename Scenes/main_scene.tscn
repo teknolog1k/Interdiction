@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dkk3npascg0gk"]
+[gd_scene load_steps=15 format=3 uid="uid://dkk3npascg0gk"]
 
 [ext_resource type="Theme" uid="uid://bupib8auxkxug" path="res://Themes/health_text.tres" id="1_2l118"]
 [ext_resource type="PackedScene" uid="uid://cef83b544c02e" path="res://Scenes/player.tscn" id="1_bmfin"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dobwx8jlwx1jn" path="res://Scenes/ai_pirate.tscn" id="5_s13td"]
 [ext_resource type="PhysicsMaterial" uid="uid://hrnw75jkur0t" path="res://Physics Materials/wallPhysMat.tres" id="8_upmwm"]
 [ext_resource type="PackedScene" uid="uid://b3bou1i4vgrkt" path="res://Scenes/Hammerhead.tscn" id="9_n5ih7"]
+[ext_resource type="Environment" uid="uid://bn1rywgmo2c0i" path="res://default_env_space.tres" id="10_kmkj5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hxoum"]
 normal = Vector2(1, 0)
@@ -175,6 +176,9 @@ scale = Vector2(5.5, 1)
 shape = SubResource("WorldBoundaryShape2D_ojhbg")
 one_way_collision_margin = 5.0
 debug_color = Color(0.839216, 0.278431, 0.678431, 0.419608)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("10_kmkj5")
 
 [connection signal="shoot" from="Player" to="." method="_on_laser_shoot"]
 [connection signal="gotGot" from="AI Pirate" to="UI Controller" method="somebody_got_got"]
