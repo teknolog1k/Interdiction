@@ -113,12 +113,12 @@ metadata/_edit_group_ = true
 [node name="Spawn Timers" type="Node" parent="."]
 
 [node name="AI Pirate Spawn Timer" type="Timer" parent="Spawn Timers"]
-wait_time = 1e+08
+wait_time = 10.0
 one_shot = true
 autostart = true
 
 [node name="Hammerhead Spawn Timer" type="Timer" parent="Spawn Timers"]
-wait_time = 1e+08
+wait_time = 15.0
 autostart = true
 
 [node name="World Bounds" type="Node2D" parent="."]
