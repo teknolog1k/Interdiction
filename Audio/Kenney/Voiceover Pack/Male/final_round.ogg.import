@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dpd1qyeaeb78a"
+path="res://.godot/imported/final_round.ogg-69053ee1fab259d6522d28229f07ac9e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Male/final_round.ogg"
+dest_files=["res://.godot/imported/final_round.ogg-69053ee1fab259d6522d28229f07ac9e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

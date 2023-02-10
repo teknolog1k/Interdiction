@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cu8tnkhx4y0j2"
+path="res://.godot/imported/war_call_for_backup.ogg-6ec2613cd622945f80845bbeb77a927c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Male/war_call_for_backup.ogg"
+dest_files=["res://.godot/imported/war_call_for_backup.ogg-6ec2613cd622945f80845bbeb77a927c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

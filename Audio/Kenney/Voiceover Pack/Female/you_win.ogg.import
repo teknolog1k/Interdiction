@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6hl8c73c2aw2"
+path="res://.godot/imported/you_win.ogg-97a317734e3dca9a1e48d656d77509fd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/you_win.ogg"
+dest_files=["res://.godot/imported/you_win.ogg-97a317734e3dca9a1e48d656d77509fd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

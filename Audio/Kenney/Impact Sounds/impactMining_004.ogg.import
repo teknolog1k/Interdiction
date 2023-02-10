@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bw4ls27wtuyj0"
+path="res://.godot/imported/impactMining_004.ogg-7240f7484e68e23fc38bde143e37a5f2.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Impact Sounds/impactMining_004.ogg"
+dest_files=["res://.godot/imported/impactMining_004.ogg-7240f7484e68e23fc38bde143e37a5f2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

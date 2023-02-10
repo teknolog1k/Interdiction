@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxnsqqv3n4ukt"
+path="res://.godot/imported/mission_completed.ogg-fff58c70e1a513cc16552ebfdd925d91.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Male/mission_completed.ogg"
+dest_files=["res://.godot/imported/mission_completed.ogg-fff58c70e1a513cc16552ebfdd925d91.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

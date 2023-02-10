@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dluchacbtbkwh"
+path="res://.godot/imported/objective_achieved.ogg-2918c24138d7e5dc8d17f0d736ccc34e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/objective_achieved.ogg"
+dest_files=["res://.godot/imported/objective_achieved.ogg-2918c24138d7e5dc8d17f0d736ccc34e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

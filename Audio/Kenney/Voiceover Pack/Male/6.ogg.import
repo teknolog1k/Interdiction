@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://db50uf56albxk"
+path="res://.godot/imported/6.ogg-7b5c5c35587667ccbdbdc7be15206e5f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Male/6.ogg"
+dest_files=["res://.godot/imported/6.ogg-7b5c5c35587667ccbdbdc7be15206e5f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

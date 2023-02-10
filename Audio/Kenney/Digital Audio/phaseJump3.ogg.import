@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhwarsovwf55g"
+path="res://.godot/imported/phaseJump3.ogg-7cc5142162e67d890b68f6a6199a146b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Digital Audio/phaseJump3.ogg"
+dest_files=["res://.godot/imported/phaseJump3.ogg-7cc5142162e67d890b68f6a6199a146b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

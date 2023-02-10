@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ch1c7yo35b5k4"
+path="res://.godot/imported/war_suppressing_fire.ogg-716d36b7787e231c0e1de5d7e4b5cb5e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Male/war_suppressing_fire.ogg"
+dest_files=["res://.godot/imported/war_suppressing_fire.ogg-716d36b7787e231c0e1de5d7e4b5cb5e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

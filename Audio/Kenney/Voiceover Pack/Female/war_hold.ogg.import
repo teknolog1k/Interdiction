@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://6khigtitk3hx"
+path="res://.godot/imported/war_hold.ogg-d82e848f040d48bf6e768a0457eceffa.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/war_hold.ogg"
+dest_files=["res://.godot/imported/war_hold.ogg-d82e848f040d48bf6e768a0457eceffa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

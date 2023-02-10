@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cnslmsaxaisgt"
+path="res://.godot/imported/war_target_engaged.ogg-9ca667417973f505559588d0542015d2.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/war_target_engaged.ogg"
+dest_files=["res://.godot/imported/war_target_engaged.ogg-9ca667417973f505559588d0542015d2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

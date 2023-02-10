@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmwcveghnfm74"
+path="res://.godot/imported/new_highscore.ogg-02d463c11fa234c114f36941a1200159.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/new_highscore.ogg"
+dest_files=["res://.godot/imported/new_highscore.ogg-02d463c11fa234c114f36941a1200159.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

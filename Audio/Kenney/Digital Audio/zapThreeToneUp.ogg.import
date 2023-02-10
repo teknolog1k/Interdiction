@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dms26i6uanx43"
+path="res://.godot/imported/zapThreeToneUp.ogg-d4374801b236a23dc5506ddc03c95d64.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Digital Audio/zapThreeToneUp.ogg"
+dest_files=["res://.godot/imported/zapThreeToneUp.ogg-d4374801b236a23dc5506ddc03c95d64.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

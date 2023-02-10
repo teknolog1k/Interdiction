@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dw11bm5rbvrqy"
+path="res://.godot/imported/engineCircular_002.ogg-05d4dbe22989b11234e5e37c2c3c7f20.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Sci-Fi Sounds/engineCircular_002.ogg"
+dest_files=["res://.godot/imported/engineCircular_002.ogg-05d4dbe22989b11234e5e37c2c3c7f20.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

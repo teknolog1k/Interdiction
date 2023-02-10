@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5hv40kpe1qio"
+path="res://.godot/imported/you_lose.ogg-3873d1170eff088ffcfcd7c0135bddd9.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/you_lose.ogg"
+dest_files=["res://.godot/imported/you_lose.ogg-3873d1170eff088ffcfcd7c0135bddd9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

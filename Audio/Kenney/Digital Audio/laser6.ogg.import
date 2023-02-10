@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ca6yfn8aqigxi"
+path="res://.godot/imported/laser6.ogg-aa0eb30c51496dd1f8755d813c44ba7b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Digital Audio/laser6.ogg"
+dest_files=["res://.godot/imported/laser6.ogg-aa0eb30c51496dd1f8755d813c44ba7b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

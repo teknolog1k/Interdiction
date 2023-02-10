@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://duajhenrulag"
+path="res://.godot/imported/game_over.ogg-a29e8681b5edc28956ebcdefa2076b69.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/game_over.ogg"
+dest_files=["res://.godot/imported/game_over.ogg-a29e8681b5edc28956ebcdefa2076b69.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

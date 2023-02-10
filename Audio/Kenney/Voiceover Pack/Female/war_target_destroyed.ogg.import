@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cy4fxnd77821v"
+path="res://.godot/imported/war_target_destroyed.ogg-48de9ff6f7270c2513a6d47839162152.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/war_target_destroyed.ogg"
+dest_files=["res://.godot/imported/war_target_destroyed.ogg-48de9ff6f7270c2513a6d47839162152.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

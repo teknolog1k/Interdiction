@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dix0olv4xkqla"
+path="res://.godot/imported/war_cover_me.ogg-d61e2ebf31945f087d4e3f12e4bb0d8d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/war_cover_me.ogg"
+dest_files=["res://.godot/imported/war_cover_me.ogg-d61e2ebf31945f087d4e3f12e4bb0d8d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

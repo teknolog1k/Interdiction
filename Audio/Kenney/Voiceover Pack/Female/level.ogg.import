@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bm6jwtkmx4jdr"
+path="res://.godot/imported/level.ogg-7e393ca1cdd18c7d81d4484a9a9e895e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/level.ogg"
+dest_files=["res://.godot/imported/level.ogg-7e393ca1cdd18c7d81d4484a9a9e895e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

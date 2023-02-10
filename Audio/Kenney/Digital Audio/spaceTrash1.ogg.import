@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://o4jqvjvu7y3f"
+path="res://.godot/imported/spaceTrash1.ogg-52414f939affba69815f2d3943c86c9c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Digital Audio/spaceTrash1.ogg"
+dest_files=["res://.godot/imported/spaceTrash1.ogg-52414f939affba69815f2d3943c86c9c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://18opes1sw3fo"
+path="res://.godot/imported/war_medic.ogg-5ea8c5bef1b7fb50d402973eda5521d3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Female/war_medic.ogg"
+dest_files=["res://.godot/imported/war_medic.ogg-5ea8c5bef1b7fb50d402973eda5521d3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

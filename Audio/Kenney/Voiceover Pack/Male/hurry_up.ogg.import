@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b5xiyoymvnv6o"
+path="res://.godot/imported/hurry_up.ogg-c3a532e051dce7368f902ea80a315672.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Kenney/Voiceover Pack/Male/hurry_up.ogg"
+dest_files=["res://.godot/imported/hurry_up.ogg-c3a532e051dce7368f902ea80a315672.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
