@@ -13,18 +13,14 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hxoum"]
 normal = Vector2(1, 0)
-distance = 0.01
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ebaeb"]
 normal = Vector2(0, 1)
-distance = 0.01
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_babm6"]
 normal = Vector2(-1, 0)
-distance = 0.01
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ojhbg"]
-distance = 0.01
 
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_qim6l")
