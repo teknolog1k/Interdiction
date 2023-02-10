@@ -34,5 +34,7 @@ one_shot = true
 autostart = true
 
 [node name="Pew Noise" type="AudioStreamPlayer2D" parent="."]
+bus = &"Lasers"
+area_mask = 0
 
 [connection signal="timeout" from="Timer" to="." method="_times_up"]

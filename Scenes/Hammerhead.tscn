@@ -64,6 +64,12 @@ wait_time = 2.5
 one_shot = true
 
 [node name="Charge Noise" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+area_mask = 0
+
+[node name="Collision Noise" type="AudioStreamPlayer2D" parent="."]
+bus = &"Collisions"
+area_mask = 8
 
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
 [connection signal="timeout" from="Charge Timer" to="." method="_time_to_charge"]

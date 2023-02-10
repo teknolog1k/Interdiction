@@ -100,8 +100,12 @@ nine_patch_stretch = true
 texture_under = ExtResource("2_wlgce")
 texture_progress = ExtResource("3_l2xfm")
 
-[node name="Score Noise" type="AudioStreamPlayer2D" parent="UI Controller"]
+[node name="Low Health Alarm" type="AudioStreamPlayer" parent="UI Controller"]
+bus = &"UI Sounds"
+
+[node name="Score Noise" type="AudioStreamPlayer" parent="UI Controller"]
 max_polyphony = 5
+bus = &"UI Sounds"
 
 [node name="AI Pirate" parent="." instance=ExtResource("5_s13td")]
 position = Vector2(812, 180)

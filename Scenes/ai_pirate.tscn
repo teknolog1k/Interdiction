@@ -52,6 +52,12 @@ wait_time = 3.0
 autostart = true
 
 [node name="Idle Noises" type="AudioStreamPlayer2D" parent="."]
+bus = &"Radio Chatter"
+area_mask = 0
+
+[node name="Collision Noise" type="AudioStreamPlayer2D" parent="."]
+bus = &"Collisions"
+area_mask = 8
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Firing Timer" to="." method="_time_to_fire"]
