@@ -42,6 +42,7 @@ func _ready():
 
 
 func _integrate_forces(state):
+	#FIXME: I want them to look stupid, but not this much
 	if player == null:
 		var playertree = get_tree().get_nodes_in_group("Player")
 		if playertree.is_empty() == true:
