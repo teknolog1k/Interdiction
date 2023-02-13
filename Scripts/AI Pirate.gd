@@ -19,6 +19,8 @@ var player: RigidBody2D
 var UIcontroller: Control
 var sprite: AnimatedSprite2D
 var thePew: PackedScene
+var muzzleShine: GPUParticles2D
+var muzzleFlash: GPUParticles2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -26,6 +28,8 @@ func _ready():
 	UIcontroller = get_node("/root/Main Scene/UI Controller")
 	sprite = get_node("AnimatedSprite2D")
 	thePew = preload("res://Scenes/laser.tscn")
+	muzzleShine = get_node("Muzzle Shine")
+	muzzleFlash = get_node("Muzzle Flash")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -93,4 +97,7 @@ func _on_body_entered(whomst):
 
 func _time_to_fire():
 	emit_signal("shoot", thePew, (rotation-(PI/2)), position, "AI")
+	muzzleShine.restart()
+	muzzleFlash.restart()
+	
 

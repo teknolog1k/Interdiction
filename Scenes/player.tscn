@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cef83b544c02e"]
+[gd_scene load_steps=9 format=3 uid="uid://cef83b544c02e"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_uhs2a"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xy70n"]
 [ext_resource type="Texture2D" uid="uid://dh2fwu5gacjyx" path="res://Sprites/icon.svg" id="2_hrmtf"]
+[ext_resource type="Material" uid="uid://ca8kl5536tdql" path="res://Particle Materials/Laser_Muzzle_Shine.tres" id="4_iob1y"]
+[ext_resource type="Texture2D" uid="uid://hwnqeimg1a8y" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/flare_01.png" id="5_xvi5k"]
+[ext_resource type="Material" uid="uid://v4sv4fth5r0f" path="res://Particle Materials/Laser_Muzzle_Flash.tres" id="6_d6r1w"]
+[ext_resource type="Texture2D" uid="uid://4sjnffe2pv1r" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/muzzle_05.png" id="7_6j7ni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3n5pv"]
 size = Vector2(130, 130)
@@ -55,6 +59,31 @@ area_mask = 0
 [node name="Collision Noise" type="AudioStreamPlayer2D" parent="."]
 bus = &"Collisions"
 area_mask = 8
+
+[node name="Muzzle Shine" type="GPUParticles2D" parent="."]
+position = Vector2(20, 0)
+rotation = 3.14159
+emitting = false
+amount = 1
+process_material = ExtResource("4_iob1y")
+texture = ExtResource("5_xvi5k")
+lifetime = 0.25
+one_shot = true
+fixed_fps = 60
+visibility_rect = Rect2(-50, -50, 100, 100)
+local_coords = true
+
+[node name="Muzzle Flash" type="GPUParticles2D" parent="."]
+position = Vector2(35, 0)
+rotation = 3.14159
+emitting = false
+amount = 1
+process_material = ExtResource("6_d6r1w")
+texture = ExtResource("7_6j7ni")
+lifetime = 0.5
+one_shot = true
+visibility_rect = Rect2(-50, -50, 100, 100)
+local_coords = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Healing Timer" to="." method="_on_heal_time"]
