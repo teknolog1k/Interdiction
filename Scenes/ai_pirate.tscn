@@ -71,6 +71,7 @@ process_material = ExtResource("4_0nhdl")
 texture = ExtResource("5_so0fq")
 lifetime = 0.1
 one_shot = true
+visibility_rect = Rect2(-50, -50, 100, 100)
 
 [node name="Muzzle Flash" type="GPUParticles2D" parent="."]
 position = Vector2(-44, 0)
@@ -80,6 +81,7 @@ process_material = ExtResource("4_tj57g")
 texture = ExtResource("7_2vy0o")
 lifetime = 0.5
 one_shot = true
+visibility_rect = Rect2(-50, -50, 100, 100)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Firing Timer" to="." method="_time_to_fire"]
