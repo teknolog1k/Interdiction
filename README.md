@@ -9,7 +9,7 @@ If you're reading this, then ***how are you here?!?!?***
 	* Laser Shot
 	* Hammerhead Boost
 	* Player/AI Thrusters
-	* Collision Noises
+	* Collision Noises for everything
 * Add script hooks to trigger sounds
 * Add some collision VFX, at least for collisions with the wall.
 * Add Subsytem options
