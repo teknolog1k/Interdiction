@@ -24,7 +24,10 @@ var charging: bool
 var stuck: bool
 var chargeTimer: Timer
 var stuckTimer: Timer
+var flashTimer: Timer
 var lockedPos: Vector2
+var flareLeft: GPUParticles2D
+var flareRight: GPUParticles2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -34,6 +37,9 @@ func _ready():
 	UIcontroller = get_node("/root/Main Scene/UI Controller")
 	chargeTimer = get_node("Charge Timer")
 	stuckTimer = get_node("Stuck Timer")
+	flashTimer = get_node("Flare Flash Timer")
+	flareLeft = get_node("Charge Flare Left")
+	flareRight = get_node("Charge Flare Right")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -102,6 +108,8 @@ func _on_body_shape_entered(_whomstRID, whomst, _fromst, wherest):
 					stuck = true
 					stuckTimer.start()
 #					print("stucked")
+			flareLeft.emitting = false
+			flareRight.emitting = false
 			charging = false
 
 
@@ -109,6 +117,8 @@ func _time_to_charge():
 #	emit_signal("shoot", thePew, (rotation-(PI/2)), position, "AI")
 	if player != null:
 		lockedPos = (player.transform.get_origin() - transform.get_origin()).normalized()
+		flareLeft.emitting = true
+		flareRight.emitting = true
 		charging = true
 
 
@@ -122,4 +132,12 @@ func _time_to_unstuck():
 	else:
 		apply_torque_impulse(wakeupImpulse)
 #	print("unstucked")
+	flareLeft.emitting = true
+	flareRight.emitting = true
+	flashTimer.start()
 	chargeTimer.start()
+
+
+func _time_to_chill():
+	flareLeft.emitting = false
+	flareRight.emitting = false

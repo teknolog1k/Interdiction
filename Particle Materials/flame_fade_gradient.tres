@@ -1,0 +1,8 @@
+[gd_resource type="GradientTexture1D" load_steps=2 format=3 uid="uid://bash503usmyuw"]
+
+[sub_resource type="Gradient" id="Gradient_iuhsn"]
+offsets = PackedFloat32Array(0, 0.554455, 0.861386, 1)
+colors = PackedColorArray(0.78445, 0.165695, 6.73831e-07, 1, 0.780392, 0.717647, 0.0666667, 0.282353, 0, 0, 0, 0.266667, 0, 0, 0, 0)
+
+[resource]
+gradient = SubResource("Gradient_iuhsn")

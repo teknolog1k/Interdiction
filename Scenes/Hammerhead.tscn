@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3bou1i4vgrkt"]
+[gd_scene load_steps=9 format=3 uid="uid://b3bou1i4vgrkt"]
 
 [ext_resource type="Texture2D" uid="uid://dh2fwu5gacjyx" path="res://Sprites/icon.svg" id="1_1t2um"]
 [ext_resource type="Script" path="res://Scripts/Hammerhead.gd" id="1_bj27x"]
 [ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_u4sdv"]
 [ext_resource type="Shape2D" uid="uid://d0tu2v3bc2ndf" path="res://Physics Materials/Shapes/hammerhead_headbox.tres" id="2_mcala"]
 [ext_resource type="Shape2D" uid="uid://b2x0wr2bcdijg" path="res://Physics Materials/Shapes/hammerhead_tailbox.tres" id="3_xg11a"]
+[ext_resource type="Material" uid="uid://5e4ljcbj2r3n" path="res://Particle Materials/hammerhead_flare_right.tres" id="6_liat8"]
+[ext_resource type="Texture2D" uid="uid://cbq41gvu1uwhl" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/muzzle_02.png" id="7_rifdu"]
+[ext_resource type="Material" uid="uid://mdto7klg0csj" path="res://Particle Materials/hammerhead_flare_left.tres" id="8_nhjeu"]
 
 [node name="Hammerhead" type="RigidBody2D" groups=["Enemies"]]
 rotation = -1.5708
@@ -63,6 +66,10 @@ autostart = true
 wait_time = 2.5
 one_shot = true
 
+[node name="Flare Flash Timer" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
+
 [node name="Charge Noise" type="AudioStreamPlayer2D" parent="."]
 bus = &"SFX"
 area_mask = 0
@@ -71,6 +78,21 @@ area_mask = 0
 bus = &"Collisions"
 area_mask = 8
 
+[node name="Charge Flare Right" type="GPUParticles2D" parent="."]
+position = Vector2(4.00004, -12)
+emitting = false
+process_material = ExtResource("6_liat8")
+texture = ExtResource("7_rifdu")
+lifetime = 0.5
+
+[node name="Charge Flare Left" type="GPUParticles2D" parent="."]
+position = Vector2(4, 12)
+emitting = false
+process_material = ExtResource("8_nhjeu")
+texture = ExtResource("7_rifdu")
+lifetime = 0.5
+
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
 [connection signal="timeout" from="Charge Timer" to="." method="_time_to_charge"]
 [connection signal="timeout" from="Stuck Timer" to="." method="_time_to_unstuck"]
+[connection signal="timeout" from="Flare Flash Timer" to="." method="_time_to_chill"]

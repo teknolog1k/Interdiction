@@ -1,8 +1,7 @@
 [gd_resource type="ParticleProcessMaterial" load_steps=3 format=3 uid="uid://ca8kl5536tdql"]
 
 [sub_resource type="Gradient" id="Gradient_iuhsn"]
-offsets = PackedFloat32Array(0, 0.306931, 1)
-colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_g5q0t"]
 gradient = SubResource("Gradient_iuhsn")
@@ -22,6 +21,3 @@ scale_min = 0.3
 scale_max = 0.4
 color = Color(0.956863, 0.270588, 0.372549, 1)
 color_ramp = SubResource("GradientTexture1D_g5q0t")
-sub_emitter_mode = 2
-sub_emitter_amount_at_end = 1
-sub_emitter_keep_velocity = true
