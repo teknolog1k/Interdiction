@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ctg77o47rb12o" path="res://Themes/bgGradient.tres" id="2_wlgce"]
 [ext_resource type="Script" path="res://Scripts/UI Controller.gd" id="3_4h1rn"]
 [ext_resource type="Texture2D" uid="uid://dmqsbt4okllwt" path="res://Themes/fgGradient.tres" id="3_l2xfm"]
-[ext_resource type="PackedScene" uid="uid://dobwx8jlwx1jn" path="res://Scenes/ai_pirate.tscn" id="5_s13td"]
+[ext_resource type="PackedScene" uid="uid://dqnpa44hn5ouj" path="res://Scenes/ai_pirate.tscn" id="5_s13td"]
 [ext_resource type="PhysicsMaterial" uid="uid://hrnw75jkur0t" path="res://Physics Materials/wallPhysMat.tres" id="8_upmwm"]
 [ext_resource type="PackedScene" uid="uid://b3bou1i4vgrkt" path="res://Scenes/Hammerhead.tscn" id="9_n5ih7"]
 
