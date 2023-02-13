@@ -23,6 +23,8 @@ var HP: float
 var thePew: PackedScene
 var healTimer: Timer
 var healingActive: bool
+var muzzleShine: GPUParticles2D
+var muzzleFlash: GPUParticles2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,6 +34,8 @@ func _ready():
 		add_to_group("Player")
 	thePew = preload("res://Scenes/laser.tscn")
 	healTimer = get_node("Healing Timer")
+	muzzleShine = get_node("Muzzle Shine")
+	muzzleFlash = get_node("Muzzle Flash")
 	healingActive = false
 	HP = maxHP
 
@@ -40,6 +44,8 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("tha_dakka"):
 		emit_signal("shoot", thePew, (rotation+(PI/2)), position, "P1")
+		muzzleShine.restart()
+		muzzleFlash.restart()
 	if healingActive:
 		HP += maxHP * (delta/timeToFullHeal)
 		if HP > maxHP:
