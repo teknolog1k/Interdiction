@@ -19,6 +19,9 @@ var lowHealthAlarm: AudioStreamPlayer
 @export var shot: float
 @export var headbutted: float
 
+@export_category("Audio")
+@export var lowHealthAlarmEnabled: bool
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -42,7 +45,7 @@ func _process(_delta):
 		HPlabel.text = str(roundf(playerHP))
 		scoreLabel.text = str(score)
 		HPbar.value = playerHP
-	if playerHP <= 25:
+	if (playerHP <= 25) and (lowHealthAlarmEnabled == true):
 		lowHealthAlarm.playing = true
 	else:
 		lowHealthAlarm.playing = false

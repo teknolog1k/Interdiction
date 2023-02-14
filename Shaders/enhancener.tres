@@ -24,5 +24,5 @@ void fragment() {
 [resource]
 shader = SubResource("Shader_27wxq")
 shader_parameter/brightness = 1.5
-shader_parameter/contrast = 5.0
-shader_parameter/saturation = 3.5
+shader_parameter/contrast = 3.5
+shader_parameter/saturation = 2.5
