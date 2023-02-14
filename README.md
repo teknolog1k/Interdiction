@@ -2,7 +2,6 @@
 If you're reading this, then ***how are you here?!?!?***
 
 ## List of Stuff that Needs To Get Done at Some Point
-* Need to move PackedScene variables to the MainScene to save RAM
 * Add Sprites for Hammerhead and the Player
 * Sort through the Kenney SFX packs and find sound effects for:
 	* Low Health Alarm (just needs minor editing)
