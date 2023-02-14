@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cehfv8ud7pj8s"]
+[gd_scene load_steps=7 format=3 uid="uid://cehfv8ud7pj8s"]
 
 [ext_resource type="Script" path="res://Scripts/Laser.gd" id="1_vh7gn"]
 [ext_resource type="Texture2D" uid="uid://b4rr3nb0dtns" path="res://Particle Materials/mid_fade_gradient.tres" id="2_8ud0n"]
 [ext_resource type="Texture2D" uid="uid://dpuwxgytln5sb" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/trace_06.png" id="3_glni6"]
+[ext_resource type="AudioStream" uid="uid://cbef88nhccenu" path="res://Audio/Kenney/Sci-Fi Sounds/laserSmall_000.ogg" id="4_o2cgm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d5eeh"]
 friction = 0.0
@@ -64,6 +65,9 @@ one_shot = true
 autostart = true
 
 [node name="Pew Noise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_o2cgm")
+autoplay = true
+attenuation = 7.99999
 bus = &"Lasers"
 area_mask = 0
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3bou1i4vgrkt"]
+[gd_scene load_steps=10 format=3 uid="uid://b3bou1i4vgrkt"]
 
 [ext_resource type="Texture2D" uid="uid://dh2fwu5gacjyx" path="res://Sprites/icon.svg" id="1_1t2um"]
 [ext_resource type="Script" path="res://Scripts/Hammerhead.gd" id="1_bj27x"]
 [ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_u4sdv"]
 [ext_resource type="Shape2D" uid="uid://d0tu2v3bc2ndf" path="res://Physics Materials/Shapes/hammerhead_headbox.tres" id="2_mcala"]
 [ext_resource type="Shape2D" uid="uid://b2x0wr2bcdijg" path="res://Physics Materials/Shapes/hammerhead_tailbox.tres" id="3_xg11a"]
+[ext_resource type="AudioStream" uid="uid://b3r4fxmrptqox" path="res://Audio/Kenney/Sci-Fi Sounds/spaceEngineLow_003.ogg" id="6_f5tcd"]
 [ext_resource type="Material" uid="uid://5e4ljcbj2r3n" path="res://Particle Materials/hammerhead_flare_right.tres" id="6_liat8"]
 [ext_resource type="Texture2D" uid="uid://cbq41gvu1uwhl" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/muzzle_02.png" id="7_rifdu"]
 [ext_resource type="Material" uid="uid://mdto7klg0csj" path="res://Particle Materials/hammerhead_flare_left.tres" id="8_nhjeu"]
@@ -71,6 +72,7 @@ wait_time = 0.75
 one_shot = true
 
 [node name="Charge Noise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_f5tcd")
 bus = &"SFX"
 area_mask = 0
 

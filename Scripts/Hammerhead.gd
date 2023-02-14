@@ -28,6 +28,7 @@ var flashTimer: Timer
 var lockedPos: Vector2
 var flareLeft: GPUParticles2D
 var flareRight: GPUParticles2D
+var chargeNoise: AudioStreamPlayer2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -40,15 +41,15 @@ func _ready():
 	flashTimer = get_node("Flare Flash Timer")
 	flareLeft = get_node("Charge Flare Left")
 	flareRight = get_node("Charge Flare Right")
+	chargeNoise = get_node("Charge Noise")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	if player == null:
-#		player = get_tree().get_root().find_node("Player")
-#	var direction = player.transform.get_origin() - transform.get_origin()
-#	direction = direction.normalized()
-#	var angle = rad_to_deg(atan2(direction.y, direction.x))
+func _process(delta):
+	if charging:
+		chargeNoise.playing = true
+	else:
+		chargeNoise.playing = false
 
 
 func _integrate_forces(state):

@@ -56,7 +56,11 @@ current = true
 bus = &"SFX"
 area_mask = 0
 
-[node name="Collision Noise" type="AudioStreamPlayer2D" parent="."]
+[node name="Metal Collision Noise" type="AudioStreamPlayer2D" parent="."]
+bus = &"Collisions"
+area_mask = 8
+
+[node name="Forcefield Collision Noise" type="AudioStreamPlayer2D" parent="."]
 bus = &"Collisions"
 area_mask = 8
 

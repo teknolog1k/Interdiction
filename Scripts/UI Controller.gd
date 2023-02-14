@@ -8,6 +8,7 @@ var HPlabel: Label
 var scoreLabel: Label
 var HPbar: TextureProgressBar
 
+var lowHealthAlarm: AudioStreamPlayer
 
 @export_category("Base Points")
 @export var AIPirateScore: int
@@ -24,7 +25,7 @@ func _ready():
 	HPlabel = get_node("Health Label")
 	scoreLabel = get_node("Score Label")
 	HPbar = get_node("Panel/Health Bar")
-	pass # Replace with function body.
+	lowHealthAlarm = get_node("Low Health Alarm")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -41,6 +42,10 @@ func _process(_delta):
 		HPlabel.text = str(roundf(playerHP))
 		scoreLabel.text = str(score)
 		HPbar.value = playerHP
+	if playerHP <= 25:
+		lowHealthAlarm.playing = true
+	else:
+		lowHealthAlarm.playing = false
 
 
 func somebody_got_got(who_was_it, howd_it_happen):

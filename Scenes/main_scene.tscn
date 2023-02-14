@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dkk3npascg0gk"]
+[gd_scene load_steps=15 format=3 uid="uid://dkk3npascg0gk"]
 
 [ext_resource type="Theme" uid="uid://bupib8auxkxug" path="res://Themes/health_text.tres" id="1_2l118"]
 [ext_resource type="PackedScene" uid="uid://cef83b544c02e" path="res://Scenes/player.tscn" id="1_bmfin"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/UI Controller.gd" id="3_4h1rn"]
 [ext_resource type="Texture2D" uid="uid://dmqsbt4okllwt" path="res://Themes/fgGradient.tres" id="3_l2xfm"]
 [ext_resource type="PackedScene" uid="uid://dqnpa44hn5ouj" path="res://Scenes/ai_pirate.tscn" id="5_s13td"]
+[ext_resource type="AudioStream" uid="uid://d3lesx838swq0" path="res://Audio/Kenney/Digital Audio/powerUp4.ogg" id="7_r37cv"]
 [ext_resource type="PhysicsMaterial" uid="uid://hrnw75jkur0t" path="res://Physics Materials/wallPhysMat.tres" id="8_upmwm"]
 [ext_resource type="PackedScene" uid="uid://b3bou1i4vgrkt" path="res://Scenes/Hammerhead.tscn" id="9_n5ih7"]
 
@@ -97,6 +98,8 @@ texture_under = ExtResource("2_wlgce")
 texture_progress = ExtResource("3_l2xfm")
 
 [node name="Low Health Alarm" type="AudioStreamPlayer" parent="UI Controller"]
+stream = ExtResource("7_r37cv")
+pitch_scale = 0.5
 bus = &"UI Sounds"
 
 [node name="Score Noise" type="AudioStreamPlayer" parent="UI Controller"]
