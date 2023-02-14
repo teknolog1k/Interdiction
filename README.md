@@ -8,6 +8,7 @@ If you're reading this, then ***how are you here?!?!?***
 	* Score Noise
 	* Player/AI Thrusters
 	* Collision Noises for everything
+	* Hammerhead Charge Sound could use a change, but this will do for now
 * Add script hooks to trigger sounds
 * Add some collision VFX, at least for collisions with the wall.
 * Add Subsystem options
