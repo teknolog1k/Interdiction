@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cef83b544c02e"]
+[gd_scene load_steps=11 format=3 uid="uid://cef83b544c02e"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_uhs2a"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xy70n"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://hwnqeimg1a8y" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/flare_01.png" id="5_xvi5k"]
 [ext_resource type="Material" uid="uid://v4sv4fth5r0f" path="res://Particle Materials/Laser_Muzzle_Flash.tres" id="6_d6r1w"]
 [ext_resource type="Texture2D" uid="uid://4sjnffe2pv1r" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/muzzle_05.png" id="7_6j7ni"]
+[ext_resource type="Material" uid="uid://dtqlom4m450dd" path="res://Shaders/enhancener.tres" id="8_r1h6f"]
+[ext_resource type="Texture2D" uid="uid://de7pvai5o51d5" path="res://Sprites/Shader Spotlight.png" id="9_d6bge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3n5pv"]
 size = Vector2(130, 130)
@@ -34,6 +36,7 @@ breaksMin = 20
 breaksStrength = 1.001
 maxHP = 100.0
 timeToFullHeal = 3
+fadeTime = 5.0
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -45,24 +48,12 @@ texture = ExtResource("2_hrmtf")
 scale = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_3n5pv")
 
-[node name="Healing Timer" type="Timer" parent="."]
-wait_time = 5.0
-one_shot = true
-
-[node name="AudioListener2D" type="AudioListener2D" parent="."]
-current = true
-
-[node name="Thruster Noise" type="AudioStreamPlayer2D" parent="."]
-bus = &"SFX"
-area_mask = 0
-
-[node name="Metal Collision Noise" type="AudioStreamPlayer2D" parent="."]
-bus = &"Collisions"
-area_mask = 8
-
-[node name="Forcefield Collision Noise" type="AudioStreamPlayer2D" parent="."]
-bus = &"Collisions"
-area_mask = 8
+[node name="Collision Avoidance Shader" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+material = ExtResource("8_r1h6f")
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("9_d6bge")
 
 [node name="Muzzle Shine" type="GPUParticles2D" parent="."]
 position = Vector2(20, 0)
@@ -89,5 +80,29 @@ one_shot = true
 visibility_rect = Rect2(-50, -50, 100, 100)
 local_coords = true
 
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
+[node name="Thruster Noise" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+area_mask = 0
+
+[node name="Metal Collision Noise" type="AudioStreamPlayer2D" parent="."]
+bus = &"Collisions"
+area_mask = 8
+
+[node name="Forcefield Collision Noise" type="AudioStreamPlayer2D" parent="."]
+bus = &"Collisions"
+area_mask = 8
+
+[node name="Healing Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Collision Avoidance Timer" type="Timer" parent="."]
+wait_time = 1.25
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Healing Timer" to="." method="_on_heal_time"]
+[connection signal="timeout" from="Collision Avoidance Timer" to="." method="_disable_collision_avoidance"]

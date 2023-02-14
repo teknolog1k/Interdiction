@@ -9,9 +9,9 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Godot Logo" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.0588235)
+modulate = Color(1, 1, 1, 0.0352941)
 visibility_layer = 2
-position = Vector2(-334, 46)
+position = Vector2(-146, 88)
 texture = ExtResource("1_pgk0s")
 
 [node name="Enhancener" type="Sprite2D" parent="."]
