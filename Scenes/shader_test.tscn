@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://ggo8lt5gwyfo"]
+
+[ext_resource type="Shader" path="res://Shaders/wall_test.gdshader" id="1_eg8hy"]
+[ext_resource type="Texture2D" uid="uid://ce48fbb88dg47" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/star_05.png" id="2_x15dv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kdjet"]
+shader = ExtResource("1_eg8hy")
+
+[node name="shaderTest" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_kdjet")
+texture = ExtResource("2_x15dv")
