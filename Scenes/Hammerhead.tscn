@@ -81,18 +81,22 @@ bus = &"Collisions"
 area_mask = 8
 
 [node name="Charge Flare Right" type="GPUParticles2D" parent="."]
+show_behind_parent = true
 position = Vector2(4.00004, -12)
 emitting = false
 process_material = ExtResource("6_liat8")
 texture = ExtResource("7_rifdu")
 lifetime = 0.5
+local_coords = true
 
 [node name="Charge Flare Left" type="GPUParticles2D" parent="."]
+show_behind_parent = true
 position = Vector2(4, 12)
 emitting = false
 process_material = ExtResource("8_nhjeu")
 texture = ExtResource("7_rifdu")
 lifetime = 0.5
+local_coords = true
 
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
 [connection signal="timeout" from="Charge Timer" to="." method="_time_to_charge"]

@@ -23,6 +23,7 @@ speed = 750
 metadata/_edit_group_ = true
 
 [node name="Trail" type="GPUParticles2D" parent="."]
+show_behind_parent = true
 position = Vector2(0, 5)
 amount = 5
 process_material = ExtResource("2_jyx0n")
