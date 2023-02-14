@@ -12,9 +12,8 @@ If you're reading this, then ***how are you here?!?!?***
 	* Hammerhead Charge Sound could use a change, but this will do for now
 * Add script hooks to trigger sounds
 * Add some collision VFX, at least for collisions with the wall.
-	* Player collision sparks
 	* Player boundary forces
-	* Port both of the above to Hammerhead / AI Pirate
+	* Explosions?
 * Add Subsystem options
 * Moar Dakka!
 
