@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 signal shoot(laser, direction, location, itsForYou)
-signal ouchie(sparky, location)
+signal ouchie(type, location)
 
 @export_group("Schmovement")
 @export_subgroup("Base Stats")
@@ -26,7 +26,6 @@ var healTimer: Timer
 var healingActive: bool
 var muzzleShine: GPUParticles2D
 var muzzleFlash: GPUParticles2D
-var collisionSparks: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,7 +34,6 @@ func _ready():
 	if thisSceneTree.has_group("Player"):
 		add_to_group("Player")
 	thePew = preload("res://Scenes/laser.tscn")
-	collisionSparks = preload("res://Scenes/collision_sparks.tscn")
 	healTimer = get_node("Healing Timer")
 	muzzleShine = get_node("Muzzle Shine")
 	muzzleFlash = get_node("Muzzle Flash")
@@ -113,12 +111,12 @@ func _on_body_entered(they):
 		healTimer.start()
 		healingActive = false
 		they.queue_free()
-		emit_signal("ouchie", collisionSparks, position)
+		emit_signal("ouchie", "sparks", position)
 	elif they.is_in_group("Enemies"):
 		HP -= 50
 		healTimer.start()
 		healingActive = false
-		emit_signal("ouchie", collisionSparks, position)
+		emit_signal("ouchie", "sparks", position)
 	
 
 

@@ -3,6 +3,7 @@ extends RigidBody2D
 
 signal gotGot(who, how)
 signal shoot(laser, direction, location, itsForYou)
+signal ouchie(type, location)
 
 @export_category("Movement")
 @export var mag: int
@@ -89,10 +90,12 @@ func _integrate_forces(state):
 func _on_body_entered(whomst):
 	if whomst.is_in_group("Lasers") and (whomst.IFF == "P1"):
 		emit_signal("gotGot", "AI Pirate", "shot")
+		emit_signal("ouchie", "sparks", position)
 		whomst.queue_free()
 		queue_free()
 	elif whomst.is_in_group("Player"):
 		emit_signal("gotGot", "AI Pirate", "headbutted")
+		emit_signal("ouchie", "sparks", position)
 		queue_free()
 
 

@@ -6,7 +6,7 @@
 
 [node name="Collision Sparks" type="GPUParticles2D"]
 emitting = false
-amount = 6
+amount = 3
 process_material = ExtResource("1_ucwl0")
 texture = ExtResource("1_fj823")
 lifetime = 0.17

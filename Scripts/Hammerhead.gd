@@ -2,6 +2,7 @@ extends RigidBody2D
 
 
 signal gotGot(who, how)
+signal ouchie(type, location)
 
 
 @export_category("Schmovement")
@@ -93,17 +94,21 @@ func _on_body_shape_entered(_whomstRID, whomst, _fromst, wherest):
 	if wherest == 1:
 		if whomst.is_in_group("Lasers") and (whomst.IFF == "P1"):
 			emit_signal("gotGot", "Hammerhead", "shot")
+			emit_signal("ouchie", "sparks", position)
 			whomst.queue_free()
 			queue_free()
 		elif whomst.is_in_group("Player"):
 			emit_signal("gotGot", "Hammerhead", "headbutted")
+			emit_signal("ouchie", "sparks", position)
 			queue_free()
 	else:
 		if whomst.is_in_group("Lasers"):
+			emit_signal("ouchie", "sparks", position)
 			whomst.queue_free()
 		else:
 			if charging:
 				if whomst.is_in_group("Player") or whomst.is_in_group("Enemies"):
+					emit_signal("ouchie", "sparks", position)
 					chargeTimer.start()
 				else:
 					stuck = true

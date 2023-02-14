@@ -24,6 +24,7 @@ var hammerheadSpawnTimer: Timer
 var hammerheadScene: PackedScene
 
 var UIController: Control
+var collisionSparks: PackedScene
 
 
 # Called when the node enters the scene tree for the first time.
@@ -33,6 +34,7 @@ func _ready():
 	hammerheadSpawnTimer = get_node("Spawn Timers/Hammerhead Spawn Timer")
 	hammerheadScene = preload("res://Scenes/Hammerhead.tscn")
 	UIController = get_node("UI Controller")
+	collisionSparks = preload("res://Scenes/collision_sparks.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -53,6 +55,7 @@ func _enemy_time():
 	lastSpawned.position = Vector2(randi_range(minX, maxX), randi_range(minY, maxY))
 	add_child(lastSpawned)
 	lastSpawned.shoot.connect(_on_laser_shoot)
+	lastSpawned.ouchie.connect(_ouchie)
 	lastSpawned.gotGot.connect(Callable(UIController, "somebody_got_got"))
 	
 	AIPirateSpawnTimer.wait_time = randf_range(AIPirateMinimumTime, AIPirateMaximumTime)
@@ -64,12 +67,14 @@ func _hammerhead_time():
 	lastSpawned.position = Vector2(randi_range(minX, maxX), randi_range(minY, maxY))
 	add_child(lastSpawned)
 	lastSpawned.gotGot.connect(Callable(UIController, "somebody_got_got"))
+	lastSpawned.ouchie.connect(_ouchie)
 	
 	hammerheadSpawnTimer.wait_time = randf_range(hammerheadMinimumTime, hammerheadMaximumTime)
 	hammerheadSpawnTimer.start()
 
 
-func _ouchie(sparky, where):
-	var lastSpark = sparky.instantiate()
-	lastSpark.position = where
-	add_child(lastSpark)
+func _ouchie(type, where):
+	if type == "sparks":
+		var lastSpark = collisionSparks.instantiate()
+		lastSpark.position = where
+		add_child(lastSpark)
