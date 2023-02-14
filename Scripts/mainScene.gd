@@ -67,3 +67,9 @@ func _hammerhead_time():
 	
 	hammerheadSpawnTimer.wait_time = randf_range(hammerheadMinimumTime, hammerheadMaximumTime)
 	hammerheadSpawnTimer.start()
+
+
+func _ouchie(sparky, where):
+	var lastSpark = sparky.instantiate()
+	lastSpark.position = where
+	add_child(lastSpark)

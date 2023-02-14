@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu5sg4a7t5ein"]
+
+[ext_resource type="Texture2D" uid="uid://cx4skyd187tgf" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/trace_01.png" id="1_fj823"]
+[ext_resource type="Material" uid="uid://cdsxcv7rauu80" path="res://Particle Materials/metal_collision_sparks.tres" id="1_ucwl0"]
+[ext_resource type="Script" path="res://Scripts/collision_sparks.gd" id="3_ow51q"]
+
+[node name="Collision Sparks" type="GPUParticles2D"]
+emitting = false
+amount = 6
+process_material = ExtResource("1_ucwl0")
+texture = ExtResource("1_fj823")
+lifetime = 0.17
+one_shot = true
+explosiveness = 1.0
+script = ExtResource("3_ow51q")
+
+[node name="Kill Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Kill Timer" to="." method="_kill"]

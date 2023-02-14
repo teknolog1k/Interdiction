@@ -1,30 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cehfv8ud7pj8s"]
+[gd_scene load_steps=6 format=3 uid="uid://cehfv8ud7pj8s"]
 
 [ext_resource type="Script" path="res://Scripts/Laser.gd" id="1_vh7gn"]
-[ext_resource type="Texture2D" uid="uid://b4rr3nb0dtns" path="res://Particle Materials/mid_fade_gradient.tres" id="2_8ud0n"]
+[ext_resource type="Material" uid="uid://cfse7hk4ipbav" path="res://Particle Materials/laser_trail.tres" id="2_jyx0n"]
 [ext_resource type="Texture2D" uid="uid://dpuwxgytln5sb" path="res://Sprites/Particle Effects/Kenney/PNG (Transparent)/trace_06.png" id="3_glni6"]
 [ext_resource type="AudioStream" uid="uid://cbef88nhccenu" path="res://Audio/Kenney/Sci-Fi Sounds/laserSmall_000.ogg" id="4_o2cgm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d5eeh"]
 friction = 0.0
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7h222"]
-particle_flag_disable_z = true
-direction = Vector3(0, 1, 0)
-spread = 0.0
-gravity = Vector3(0, 0, 0)
-initial_velocity_min = 75.0
-initial_velocity_max = 75.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
-scale_min = 0.05
-scale_max = 0.05
-color = Color(0.956863, 0.270588, 0.372549, 1)
-color_ramp = ExtResource("2_8ud0n")
-turbulence_enabled = true
-turbulence_noise_strength = 0.5
-turbulence_noise_scale = 5.0
-turbulence_noise_speed_random = 5.0
 
 [node name="Laser" type="RigidBody2D"]
 collision_layer = 2
@@ -43,7 +25,7 @@ metadata/_edit_group_ = true
 [node name="Trail" type="GPUParticles2D" parent="."]
 position = Vector2(0, 5)
 amount = 5
-process_material = SubResource("ParticleProcessMaterial_7h222")
+process_material = ExtResource("2_jyx0n")
 texture = ExtResource("3_glni6")
 lifetime = 0.25
 randomness = 0.75
