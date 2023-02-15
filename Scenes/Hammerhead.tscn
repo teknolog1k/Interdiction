@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dh2fwu5gacjyx" path="res://Sprites/icon.svg" id="1_1t2um"]
 [ext_resource type="Script" path="res://Scripts/Hammerhead.gd" id="1_bj27x"]
-[ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_u4sdv"]
+[ext_resource type="PhysicsMaterial" uid="uid://k83k7xnwsh3c" path="res://Physics Materials/hammerheadPhysMat.tres" id="1_fb64w"]
 [ext_resource type="Shape2D" uid="uid://d0tu2v3bc2ndf" path="res://Physics Materials/Shapes/hammerhead_headbox.tres" id="2_mcala"]
 [ext_resource type="Shape2D" uid="uid://b2x0wr2bcdijg" path="res://Physics Materials/Shapes/hammerhead_tailbox.tres" id="3_xg11a"]
 [ext_resource type="AudioStream" uid="uid://b3r4fxmrptqox" path="res://Audio/Kenney/Sci-Fi Sounds/spaceEngineLow_003.ogg" id="6_f5tcd"]
@@ -15,9 +15,9 @@ rotation = -1.5708
 collision_layer = 9
 collision_mask = 9
 mass = 80.0
-physics_material_override = ExtResource("1_u4sdv")
+physics_material_override = ExtResource("1_fb64w")
 gravity_scale = 0.0
-max_contacts_reported = 2
+max_contacts_reported = 1
 contact_monitor = true
 linear_damp = 5.0
 angular_damp = 5.0

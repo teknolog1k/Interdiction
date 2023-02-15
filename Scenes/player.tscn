@@ -52,7 +52,7 @@ shape = SubResource("RectangleShape2D_3n5pv")
 modulate = Color(1, 1, 1, 0)
 z_index = -1
 material = ExtResource("8_r1h6f")
-scale = Vector2(0.45, 0.45)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("9_d6bge")
 
 [node name="Muzzle Shine" type="GPUParticles2D" parent="."]
