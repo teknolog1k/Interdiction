@@ -5,17 +5,23 @@ signal gotGot(who, how)
 signal ouchie(type, location)
 
 
-@export_category("Schmovement")
+@export_group("Schmovement")
+@export_subgroup("Linear")
 @export var mag: int
 @export var speed: int
+@export_subgroup("Angular")
 @export var turningMag: int
 @export var turningSpeed: int
+@export_subgroup("Other")
 @export var proportionalConstant: int
-@export_category("Charging")
+@export_group("Hammerhead")
+@export_subgroup("Orbit")
 @export var orbitDistance: int
 @export var perfectOrbitSlow: float
+@export_subgroup("Charging")
 @export var chargingMag: int
 @export var chargingSpeed: int
+@export_subgroup("Other")
 @export var wakeupImpulse: int
 
 

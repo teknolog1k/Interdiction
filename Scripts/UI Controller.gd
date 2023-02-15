@@ -10,16 +10,16 @@ var HPbar: TextureProgressBar
 
 var lowHealthAlarm: AudioStreamPlayer
 
-@export_category("Base Points")
+@export_group("Base Points")
 @export var AIPirateScore: int
 @export var hammerheadScore: int
 
 
-@export_category("Multipliers")
+@export_group("Multipliers")
 @export var shot: float
 @export var headbutted: float
 
-@export_category("Audio")
+@export_group("Audio")
 @export var lowHealthAlarmEnabled: bool
 
 

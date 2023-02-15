@@ -5,13 +5,16 @@ signal gotGot(who, how)
 signal shoot(laser, direction, location, itsForYou)
 signal ouchie(type, location)
 
-@export_category("Movement")
+@export_group("Schmovement")
+@export_subgroup("Linear")
 @export var mag: int
 @export var speed: int
+@export_subgroup("Angular")
 @export var turningMag: int
 @export var turningSpeed: int
+@export_subgroup("Other")
 @export var proportionalConstant: int
-@export_category("Animation")
+@export_group("Animation")
 @export var turnAnimThreshold: int
 @export var linAnimThreshold: int
 

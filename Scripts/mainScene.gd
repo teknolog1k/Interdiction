@@ -1,19 +1,19 @@
 extends Node2D
 
 
-@export_category("Enemy Spawn Timing")
-@export_group("AI Pirate")
+@export_group("Enemy Spawn Timing")
+@export_subgroup("AI Pirate")
 @export var AIPirateMinimumTime: float
 @export var AIPirateMaximumTime: float
-@export_group("Hammerhead")
+@export_subgroup("Hammerhead")
 @export var hammerheadMinimumTime: float
 @export var hammerheadMaximumTime: float
 
-@export_category("Enemy Spawn Location")
-@export_group("X Range")
+@export_group("Enemy Spawn Location")
+@export_subgroup("X Range")
 @export var minX: int
 @export var maxX: int
-@export_group("Y Range")
+@export_subgroup("Y Range")
 @export var minY: int
 @export var maxY: int
 
