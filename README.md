@@ -11,6 +11,7 @@ If you're reading this, then ***how are you here?!?!?***
 	* Hammerhead Charge Sound could use a change, but this will do for now
 * Add script hooks to trigger sounds
 * Add some collision VFX, at least for collisions with the wall.
+	* maybe <sup>^this</sup> could be improved by animating the fadeout of the shader
 	* Player boundary forces
 	* Explosions?
 * Add Subsystem options
