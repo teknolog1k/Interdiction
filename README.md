@@ -14,6 +14,7 @@ If you're reading this, then ***how are you here?!?!?***
 	* maybe <sup>^this</sup> could be improved by animating the fadeout of the shader
 	* Player boundary forces
 	* Explosions?
+		* This could maybe be the Deltarune/ULTRAKILL explosion FX for now
 * Add Subsystem options
 * Moar Dakka!
 * Make an actual level and progression system
