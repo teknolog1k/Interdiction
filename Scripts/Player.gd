@@ -31,8 +31,6 @@ var muzzleShine: GPUParticles2D
 var muzzleFlash: GPUParticles2D
 var collisionAvoidanceShader: Sprite2D
 var collisionAvoidanceFade: AnimationPlayer
-var collisionAvoidanceTimer: Timer
-var collisionAvoidanceActive: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
