@@ -11,10 +11,9 @@ If you're reading this, then ***how are you here?!?!?***
 	* Hammerhead Charge Sound could use a change, but this will do for now
 * Add script hooks to trigger sounds
 * Add some collision VFX, at least for collisions with the wall.
-	* maybe <sup>^this</sup> could be improved by animating the fadeout of the shader
 	* Player boundary forces
 	* Explosions?
-		* This could maybe be the Deltarune/ULTRAKILL explosion FX for now
+		* This could maybe be the Deltarune/ULTRAKILL explosion FX for now (funni)
 * Add Subsystem options
 * Moar Dakka!
 * Make an actual level and progression system

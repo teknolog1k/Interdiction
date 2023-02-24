@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cef83b544c02e"]
+[gd_scene load_steps=13 format=3 uid="uid://cef83b544c02e"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://4vfnldsg5efj" path="res://Physics Materials/shipPhysMat.tres" id="1_uhs2a"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xy70n"]
@@ -12,6 +12,27 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3n5pv"]
 size = Vector2(130, 130)
+
+[sub_resource type="Animation" id="Animation_ipenf"]
+resource_name = "Collision Flash"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Collision Avoidance Shader:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1428, 0.357, 1.4994, 1.8564, 2.499),
+"transitions": PackedFloat32Array(1, 1, 1.07178, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.290196), Color(1, 1, 1, 0.760784), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_on3lj"]
+_data = {
+"Collision Flash": SubResource("Animation_ipenf")
+}
 
 [node name="Player" type="RigidBody2D" groups=["Player"]]
 rotation = -1.5708
@@ -54,6 +75,11 @@ z_index = -1
 material = ExtResource("8_r1h6f")
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("9_d6bge")
+
+[node name="Collision Avoidance Fade" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_on3lj")
+}
 
 [node name="Muzzle Shine" type="GPUParticles2D" parent="."]
 position = Vector2(20, 0)

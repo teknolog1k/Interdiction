@@ -30,6 +30,7 @@ var healingActive: bool
 var muzzleShine: GPUParticles2D
 var muzzleFlash: GPUParticles2D
 var collisionAvoidanceShader: Sprite2D
+var collisionAvoidanceFade: AnimationPlayer
 var collisionAvoidanceTimer: Timer
 var collisionAvoidanceActive: bool
 
@@ -44,8 +45,7 @@ func _ready():
 	muzzleShine = get_node("Muzzle Shine")
 	muzzleFlash = get_node("Muzzle Flash")
 	collisionAvoidanceShader = get_node("Collision Avoidance Shader")
-	collisionAvoidanceTimer = get_node("Collision Avoidance Timer")
-	collisionAvoidanceActive = false
+	collisionAvoidanceFade = get_node("Collision Avoidance Fade")
 	healingActive = false
 	HP = maxHP
 
@@ -63,13 +63,6 @@ func _process(delta):
 			healingActive = false
 	if HP <= 0:
 		queue_free()
-	if collisionAvoidanceActive == true:
-		collisionAvoidanceShader.modulate.a = 255
-	elif (collisionAvoidanceActive == false):
-#		collisionAvoidanceShader.modulate.a -= ((delta/fadeTime) * 255)
-#		collisionAvoidanceShader.modulate.a -= 1
-		collisionAvoidanceShader.modulate.a = 0
-#		print(delta/fadeTime)
 
 
 
@@ -134,13 +127,7 @@ func _on_body_entered(they):
 		healingActive = false
 		emit_signal("ouchie", "sparks", position)
 	elif they.is_in_group("World Bounds"):
-		collisionAvoidanceActive = true
-		collisionAvoidanceTimer.start()
-
+		collisionAvoidanceFade.play("Collision Flash")
 
 func _on_heal_time():
 	healingActive = true
-
-
-func _disable_collision_avoidance():
-	collisionAvoidanceActive = false
