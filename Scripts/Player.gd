@@ -1,7 +1,5 @@
 extends RigidBody2D
 
-# Testing Git things
-
 signal shoot(laser, direction, location, itsForYou)
 signal ouchie(type, location)
 
