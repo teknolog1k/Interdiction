@@ -21,4 +21,3 @@ If you're reading this, then ***how are you here?!?!?***
 ### *GET OUT!!!*
 *(elmer fudd voice) and stay out, ehehhehehuuh*
 
-this project is basically dead for now lol
