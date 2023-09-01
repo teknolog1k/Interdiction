@@ -31,7 +31,7 @@ project/assembly_name="Interdiction"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/AsepriteWizard/plugin.cfg", "res://addons/version-check/plugin.cfg")
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/AsepriteWizard/plugin.cfg")
 
 [input]
 
