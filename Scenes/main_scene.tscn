@@ -37,9 +37,6 @@ maxY = 550
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[node name="Player" parent="." instance=ExtResource("1_bmfin")]
-position = Vector2(504, 314)
-
 [node name="UI Controller" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -106,13 +103,6 @@ bus = &"UI Sounds"
 [node name="Score Noise" type="AudioStreamPlayer" parent="UI Controller"]
 max_polyphony = 5
 bus = &"UI Sounds"
-
-[node name="AI Pirate" parent="." instance=ExtResource("5_s13td")]
-position = Vector2(812, 180)
-
-[node name="Hammerhead" parent="." instance=ExtResource("9_n5ih7")]
-position = Vector2(560, 228)
-metadata/_edit_group_ = true
 
 [node name="Spawn Timers" type="Node" parent="."]
 
@@ -195,6 +185,18 @@ tile_set = ExtResource("11_dcjbu")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 0, 1, 65535, 0, 1, 65534, 0, 1, 65533, 0, 1, 65532, 0, 1, 65531, 0, 1, 65530, 0, 1, 65529, 0, 1, 65528, 0, 1, 65527, 0, 1, 65526, 0, 1, 65525, 0, 1, 65524, 0, 1, 65523, 0, 1, 65522, 0, 1, 65521, 0, 1, 65520, 0, 1, 65519, 0, 1, 65518, 0, 1, 65517, 0, 1, 65516, 0, 1, 65515, 0, 1, 65514, 0, 1, 65513, 0, 1, 65512, 0, 1, 65511, 0, 1, 65510, 0, 1, 65509, 0, 1, 65508, 0, 1, 65507, 0, 1, 65506, 0, 1, 65505, 0, 1, 65504, 0, 1, 65503, 0, 1, 65502, 0, 1, 65501, 0, 1, 65500, 0, 1, 65499, 0, 1, 65498, 0, 1, 65497, 0, 1, 1, 0, 1, 2, 0, 1, 3, 0, 1, 4, 0, 1, 5, 0, 1, 6, 0, 1, 7, 0, 1, 8, 0, 1, 9, 0, 1, 10, 0, 1, 11, 0, 1, 12, 0, 1, 13, 0, 1, 14, 0, 1, 15, 0, 1, 16, 0, 1, 17, 0, 1, 18, 0, 1, 19, 0, 1, 20, 0, 1, 21, 0, 1, 22, 0, 1, 23, 0, 1, 24, 0, 1, 25, 0, 1, 26, 0, 1, 27, 0, 1, 28, 0, 1, 29, 0, 1, 30, 0, 1, 31, 0, 1, 32, 0, 1, 33, 0, 1, 34, 0, 1, 35, 0, 1, 36, 0, 1, 37, 0, 1, 38, 0, 1)
 
+[node name="Player" parent="." instance=ExtResource("1_bmfin")]
+position = Vector2(504, 314)
+
+[node name="AI Pirate" parent="." instance=ExtResource("5_s13td")]
+position = Vector2(812, 180)
+
+[node name="Hammerhead" parent="." instance=ExtResource("9_n5ih7")]
+position = Vector2(560, 228)
+metadata/_edit_group_ = true
+
+[connection signal="timeout" from="Spawn Timers/AI Pirate Spawn Timer" to="." method="_enemy_time"]
+[connection signal="timeout" from="Spawn Timers/Hammerhead Spawn Timer" to="." method="_hammerhead_time"]
 [connection signal="ouchie" from="Player" to="." method="_ouchie"]
 [connection signal="shoot" from="Player" to="." method="_on_laser_shoot"]
 [connection signal="gotGot" from="AI Pirate" to="UI Controller" method="somebody_got_got"]
@@ -202,5 +204,3 @@ layer_0/tile_data = PackedInt32Array(0, 0, 1, 65535, 0, 1, 65534, 0, 1, 65533, 0
 [connection signal="shoot" from="AI Pirate" to="." method="_on_laser_shoot"]
 [connection signal="gotGot" from="Hammerhead" to="UI Controller" method="somebody_got_got"]
 [connection signal="ouchie" from="Hammerhead" to="." method="_ouchie"]
-[connection signal="timeout" from="Spawn Timers/AI Pirate Spawn Timer" to="." method="_enemy_time"]
-[connection signal="timeout" from="Spawn Timers/Hammerhead Spawn Timer" to="." method="_hammerhead_time"]
