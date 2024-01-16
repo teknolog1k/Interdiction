@@ -1,33 +1,39 @@
 @tool
 extends EditorPlugin
 
-const ConfigDialog = preload('config/config_dialog.tscn')
-const WizardWindow = preload("animated_sprite/docks/as_wizard_dock_container.tscn")
-const ImportPlugin = preload("animated_sprite/import_plugin.gd")
+# importers
+const NoopImportPlugin = preload("importers/noop_import_plugin.gd")
+const SpriteFramesImportPlugin = preload("importers/sprite_frames_import_plugin.gd")
+const TilesetTextureImportPlugin = preload("importers/tileset_texture_import_plugin.gd")
+const TextureImportPlugin = preload("importers/static_texture_import_plugin.gd")
+
+# export
 const ExportPlugin = preload("export/metadata_export_plugin.gd")
-const AnimatedSpriteInspectorPlugin = preload("animated_sprite/inspector_plugin.gd")
-const SpriteInspectorPlugin = preload("animation_player/inspector_plugin.gd")
+# interface
+const ConfigDialog = preload('config/config_dialog.tscn')
+const WizardWindow = preload("interface/docks/wizard/as_wizard_dock_container.tscn")
+const AnimatedSpriteInspectorPlugin = preload("interface/docks/animated_sprite/inspector_plugin.gd")
+const SpriteInspectorPlugin = preload("interface/docks/sprite/inspector_plugin.gd")
+
 const menu_item_name = "Aseprite Spritesheet Wizard"
 const config_menu_item_name = "Aseprite Wizard Config"
 
 var config = preload("config/config.gd").new()
 var window: TabContainer
 var config_window: PopupPanel
-var import_plugin : EditorImportPlugin
 var export_plugin : EditorExportPlugin
 var sprite_inspector_plugin: EditorInspectorPlugin
 var animated_sprite_inspector_plugin: EditorInspectorPlugin
 
-var _importer_enabled = false
 var _exporter_enabled = false
 
+var _importers = []
 
 func _enter_tree():
 	_load_config()
 	_setup_menu_entries()
 	_setup_importer()
 	_setup_exporter()
-	_configure_preset()
 	_setup_animated_sprite_inspector_plugin()
 	_setup_sprite_inspector_plugin()
 
@@ -63,24 +69,24 @@ func _remove_menu_entries():
 
 
 func _setup_importer():
-	if config.is_importer_enabled():
-		import_plugin = ImportPlugin.new()
-		import_plugin.file_system = get_editor_interface().get_resource_filesystem()
-		import_plugin.config = config
-		add_import_plugin(import_plugin)
-		_importer_enabled = true
+	_importers = [
+		NoopImportPlugin.new(),
+		SpriteFramesImportPlugin.new(),
+		TilesetTextureImportPlugin.new(),
+		TextureImportPlugin.new(),
+	]
 
-
-func _configure_preset():
-	if config.is_import_preset_enabled():
-		config.create_import_preset_setting()
+	for i in _importers:
+		if not i is NoopImportPlugin:
+			i.file_system = get_editor_interface().get_resource_filesystem()
+		i.config = config
+		add_import_plugin(i)
 
 
 func _remove_importer():
-	if _importer_enabled:
-		remove_import_plugin(import_plugin)
-		_importer_enabled = false
-		
+	for i in _importers:
+		remove_import_plugin(i)
+
 
 func _setup_exporter():
 	if config.is_exporter_enabled():
