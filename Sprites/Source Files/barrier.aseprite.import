@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dbg21xq144y40"
+path="res://.godot/imported/barrier.aseprite-fe408188b68f4bb837fdef89fea40c8c.res"
+
+[deps]
+
+source_file="res://Sprites/Source Files/barrier.aseprite"
+dest_files=["res://.godot/imported/barrier.aseprite-fe408188b68f4bb837fdef89fea40c8c.res"]
+
+[params]
+
