@@ -36,6 +36,7 @@ maxY = 550
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
+zoom = Vector2(0.9, 0.9)
 
 [node name="UI Controller" type="Control" parent="."]
 layout_mode = 3
