@@ -8,15 +8,13 @@ gradient = SubResource("Gradient_iuhsn")
 
 [resource]
 particle_flag_disable_z = true
-direction = Vector3(-1, 0, 0)
-spread = 0.0
-gravity = Vector3(0, 0, 0)
-initial_velocity_min = 5.0
-initial_velocity_max = 10.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
 angle_min = 88.0
 angle_max = 92.0
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
 scale_min = 0.3
 scale_max = 0.4
 color = Color(0.956863, 0.270588, 0.372549, 1)
